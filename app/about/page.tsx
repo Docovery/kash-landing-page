@@ -1,4 +1,16 @@
 import { FiUsers, FiShield, FiZap } from "react-icons/fi";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "\u00c0 propos",
+  description:
+    "D\u00e9couvrez la mission de Kash : digitaliser le commerce local en RD Congo en r\u00e9f\u00e9ren\u00e7ant les boutiques et produits de proximit\u00e9.",
+  openGraph: {
+    title: "\u00c0 propos | Kash",
+    description:
+      "D\u00e9couvrez la mission de Kash : digitaliser le commerce local en RD Congo.",
+  },
+};
 
 export default function AboutPage() {
   return (
