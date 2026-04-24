@@ -32,6 +32,7 @@ export default function LogosBar() {
                 width={120}
                 height={40}
                 className="h-full w-auto object-contain"
+                style={{ width: "auto", height: "100%" }}
               />
             </div>
           ))}

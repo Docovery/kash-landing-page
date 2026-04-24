@@ -66,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${sora.variable} ${dmSans.variable}`}>
+    <html lang="fr" className={`${sora.variable} ${dmSans.variable}`} data-scroll-behavior="smooth">
       <body>
         <Navbar />
         <main>{children}</main>
