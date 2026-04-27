@@ -3,11 +3,11 @@ import { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 
 const faqData = [
-  { q: "Comment fonctionne Kash ?", a: "Kash est un catalogue digital qui r\u00e9f\u00e9rence les commerces locaux et leurs produits. En tant que client, vous explorez les boutiques pr\u00e8s de chez vous, comparez les prix et v\u00e9rifiez la disponibilit\u00e9 avant de vous d\u00e9placer." },
-  { q: "Comment ma boutique peut-elle \u00eatre r\u00e9f\u00e9renc\u00e9e ?", a: "C\u2019est l\u2019\u00e9quipe Kash qui se charge de r\u00e9f\u00e9rencer votre commerce. Contactez-nous via l\u2019application ou notre page contact, et nous ajoutons vos produits, prix et informations dans le catalogue." },
-  { q: "Quelles villes sont couvertes en RDC ?", a: "Kash est d\u00e9j\u00e0 disponible \u00e0 Kinshasa, Lubumbashi, Goma, Bukavu, Matadi et Kisangani. Nous \u00e9largissons notre couverture chaque mois. Vous pouvez sugg\u00e9rer votre ville depuis l\u2019application." },
-  { q: "Kash est-il gratuit ?", a: "Oui, l\u2019application est enti\u00e8rement gratuite pour les clients. Pour les commer\u00e7ants, le r\u00e9f\u00e9rencement de base est gratuit. Des options de visibilit\u00e9 premium sont disponibles pour ceux qui souhaitent se d\u00e9marquer." },
-  { q: "Mes donn\u00e9es sont-elles s\u00e9curis\u00e9es ?", a: "Vos donn\u00e9es sont chiffr\u00e9es et stock\u00e9es sur des serveurs s\u00e9curis\u00e9s. Vous gardez le contr\u00f4le total et pouvez supprimer votre compte \u00e0 tout moment depuis les param\u00e8tres de l\u2019application." },
+  { q: "Comment fonctionne Kash ?", a: "Kash est un catalogue digital qui référence les commerces locaux et leurs produits. Explorez les boutiques près de chez vous, comparez les prix et vérifiez la disponibilité avant de vous déplacer." },
+  { q: "Comment ma boutique peut-elle être référencée ?", a: "C'est l'équipe Kash qui se charge de référencer votre commerce. Contactez-nous via l'application ou notre page contact, et nous ajoutons vos produits, prix et informations dans le catalogue." },
+  { q: "Quelles villes sont couvertes ?", a: "Kash est déjà disponible dans plusieurs villes et nous élargissons notre couverture chaque mois. Vous pouvez suggérer votre ville depuis l'application." },
+  { q: "Kash est-il gratuit ?", a: "Oui, l'application est entièrement gratuite pour les clients. Pour les commerçants, le référencement de base est gratuit. Des options de visibilité premium sont disponibles pour ceux qui souhaitent se démarquer." },
+  { q: "Mes données sont-elles sécurisées ?", a: "Vos données sont chiffrées et stockées sur des serveurs sécurisés. Vous gardez le contrôle total et pouvez supprimer votre compte à tout moment depuis les paramètres de l'application." },
 ];
 
 export default function FAQ() {

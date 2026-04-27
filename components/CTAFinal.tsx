@@ -16,7 +16,7 @@ export default function CTAFinal() {
             Kash est disponible<br />sur tous vos appareils
           </h2>
           <p className="text-base font-light text-white/68 mb-10 leading-[1.75] max-w-[440px] max-[900px]:max-w-none max-[480px]:text-sm max-[480px]:mb-7">
-            Rejoignez des milliers d'utilisateurs qui trouvent chaque jour les meilleurs produits et commerces pr\u00e8s de chez eux en RD Congo.
+            Rejoignez des milliers d&apos;utilisateurs qui trouvent chaque jour les meilleurs produits et commerces près de chez eux.
           </p>
           <div className="flex gap-3.5 flex-wrap max-[480px]:flex-col">
             {stores.map((store, i) => (
@@ -30,12 +30,10 @@ export default function CTAFinal() {
             ))}
           </div>
         </div>
-        <div className="flex justify-center items-end relative pt-10 max-[900px]:hidden">
-          <div className="absolute w-80 h-80 rounded-full bg-[radial-gradient(circle,rgba(255,127,80,0.3)_0%,rgba(26,127,232,0.15)_50%,transparent_75%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[40px]" />
-          <div className="w-60 bg-[#0d0d1a] rounded-[40px] p-3 shadow-[0_40px_80px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.07)] relative z-2 animate-[phoneFloatStraight_5s_ease-in-out_infinite_0.5s] origin-bottom">
-            <div className="bg-white rounded-[30px] overflow-hidden min-h-[440px]">
-              <Image src="/images/splash_screen.png" alt="Kash App" width={240} height={440} className="w-full block" style={{ height: "auto", borderRadius: "inherit" }} />
-            </div>
+        <div className="flex justify-center items-center relative max-[900px]:hidden">
+          <div className="absolute w-80 h-80 rounded-full bg-linear-to-br from-primary/15 via-[rgba(26,127,232,0.1)] to-accent/8 blur-[40px]" />
+          <div className="relative z-2 animate-[phoneFloatStraight_5s_ease-in-out_infinite_0.5s] origin-bottom drop-shadow-[0_40px_60px_rgba(0,0,0,0.5)]">
+            <Image src="/images/mockups/splash_screen_mockup.svg" alt="Kash App" width={240} height={440} className="w-[240px] h-auto block" />
           </div>
         </div>
       </div>

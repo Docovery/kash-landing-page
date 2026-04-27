@@ -17,7 +17,7 @@ export default function Hero() {
             Explorez.<br />Economisez.<br /><em className="not-italic text-accent">Connectez.</em>
           </h1>
           <p className="text-base font-light text-white/78 max-w-[420px] leading-[1.75] mb-9.5 max-[900px]:mx-auto max-[900px]:max-w-[520px] max-[480px]:text-sm max-[480px]:mb-7">
-            Kash référence les commerces locaux et vous aide à trouver ce que vous cherchez près de chez vous. Un catalogue digital de votre quartier, dans votre poche.
+            Kash connecte les commerces locaux, vous aide à trouver les produits dont vous avez besoin et vous fait économiser de l&apos;argent.
           </p>
           <div className="flex gap-3.5 flex-wrap mb-12 max-[900px]:justify-center max-[480px]:flex-col max-[480px]:items-center">
             <a href="#cta" className="font-display text-sm font-semibold text-white bg-accent border-none rounded-full py-[15px] px-[34px] cursor-pointer transition-all duration-200 shadow-[0_6px_24px_rgba(255,127,80,0.45)] no-underline inline-block hover:-translate-y-0.5 hover:shadow-[0_10px_36px_rgba(255,127,80,0.55)] max-[480px]:w-full max-[480px]:text-center">
@@ -29,12 +29,12 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-3.5 max-[900px]:justify-center max-[480px]:flex-col max-[480px]:gap-2">
             <div className="flex">
-              {[72, 73, 74, 75].map((id) => (
-                <img key={id} className="w-9 h-9 rounded-full border-[2.5px] border-white -ml-2.5 first:ml-0 object-cover block" src={`https://i.pravatar.cc/${id}`} alt="User" />
+              {[1, 2, 3, 4].map((id) => (
+                <img key={id} className="w-9 h-9 rounded-full border-[2.5px] border-white -ml-2.5 first:ml-0 object-cover block" src={`/images/faces/face${id}.jpg`} alt="User" />
               ))}
             </div>
             <p className="text-[13px] text-white/80 font-normal font-body max-[480px]:text-xs max-[480px]:text-center">
-              Rejoint par <strong className="text-white font-semibold">+2 400</strong> utilisateurs ce mois-ci
+              Rejoint <strong className="text-white font-semibold">+2 000</strong> utilisateurs sur Kash
             </p>
           </div>
         </div>
@@ -54,15 +54,9 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Phone frame */}
+            {/* Phone mockup */}
             <div className="relative z-2 animate-[phoneFloat_4.5s_ease-in-out_infinite] drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)] [filter:drop-shadow(0_0_40px_rgba(255,127,80,0.25))_drop-shadow(0_40px_60px_rgba(0,0,0,0.45))]">
-              <div className="w-[260px] bg-[#0d0d1a] rounded-[42px] p-[13px] relative shadow-[0_0_0_1px_rgba(255,255,255,0.08),inset_0_0_0_1px_rgba(255,255,255,0.04)]">
-                <div className="w-24 bg-[#0d0d1a] rounded-[20px] mx-auto mb-2.5 flex items-center justify-center gap-1.5 relative z-2">
-                </div>
-                <div className="bg-gradient-to-br from-[#f8faff] to-white rounded-[32px] overflow-hidden">
-                  <Image src="/images/home_page.png" alt="Kash App Home" width={260} height={520} className="w-full block rounded-[32px]" style={{ height: "auto" }} priority />
-                </div>
-              </div>
+              <Image src="/images/mockups/splash_screen_mockup2.svg" alt="Kash App" width={260} height={476} className="w-[260px] h-auto block" priority />
             </div>
 
             {/* Right badge */}

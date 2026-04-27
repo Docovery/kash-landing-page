@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import KashLogo from "./KashLogo";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -68,9 +68,9 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="flex gap-3 items-center">
-          <button className="font-display text-[13px] font-semibold text-white bg-gradient-to-br from-primary to-primary-dark border-none rounded-full py-2.5 px-6 cursor-pointer transition-all duration-250 shadow-[0_2px_12px_rgba(0,87,183,0.25)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,87,183,0.35)] max-[900px]:hidden">
+          <Link href="#cta" className="font-display text-[13px] font-semibold text-white bg-gradient-to-br from-primary to-primary-dark border-none rounded-full py-2.5 px-6 cursor-pointer transition-all duration-250 shadow-[0_2px_12px_rgba(0,87,183,0.25)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(0,87,183,0.35)] max-[900px]:hidden">
             Télécharger
-          </button>
+          </Link>
           <button
             className={`hamburger hidden max-[900px]:block bg-transparent border-none cursor-pointer w-10 h-10 relative z-200${menuOpen ? " active" : ""}`}
             onClick={toggleMenu}

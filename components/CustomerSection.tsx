@@ -1,4 +1,4 @@
-export default function CompareSection() {
+export default function CustomerSection() {
   const rows = [
     { store: "Chez Mama", price: "$3.50", dist: "0.3 km", saving: "" },
     { store: "Marché Central", price: "$2.80", dist: "1.2 km", saving: "-$0.70", best: true },

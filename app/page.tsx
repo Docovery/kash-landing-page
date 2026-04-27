@@ -1,8 +1,8 @@
 import Hero from "../components/Hero";
 import LogosBar from "../components/LogosBar";
 import Features from "../components/Features";
-import ScanSection from "../components/ScanSection";
-import CompareSection from "../components/CompareSection";
+import MerchantSection from "../components/MerchantSection";
+import CustomerSection from "../components/CustomerSection";
 import HowItWorks from "../components/HowItWorks";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
@@ -14,8 +14,8 @@ export default function Home() {
       <Hero />
       <LogosBar />
       <Features />
-      <ScanSection />
-      <CompareSection />
+      <MerchantSection />
+      <CustomerSection />
       <HowItWorks />
       <Testimonials />
       <FAQ />

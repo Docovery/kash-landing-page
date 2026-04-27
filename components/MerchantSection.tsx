@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ScanSection() {
+export default function MerchantSection() {
   const bullets = [
     "Votre boutique référencée et visible par des milliers de clients à proximité",
     "Vos produits, prix et promotions ajoutés et mis à jour par l\u2019équipe Kash",
@@ -13,16 +13,14 @@ export default function ScanSection() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-20 items-center max-[1024px]:gap-12 max-[900px]:grid-cols-1 max-[900px]:gap-10">
         <div className="relative flex justify-center max-[900px]:hidden">
           <div className="absolute w-80 h-80 rounded-full bg-[radial-gradient(circle,rgba(0,87,183,0.08)_0%,transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-          <div className="w-[230px] bg-gray-900 rounded-[36px] p-[11px] shadow-[0_24px_64px_rgba(0,87,183,0.22),0_0_0_1px_rgba(255,255,255,0.05)] relative z-2">
-            <div className="bg-white rounded-[28px] overflow-hidden">
-              <Image src="/images/home_page.png" alt="Kash App Scanner" width={230} height={460} className="w-full block" style={{ height: "auto", borderRadius: "inherit" }} />
-            </div>
+          <div className="relative z-2 drop-shadow-[0_24px_64px_rgba(0,87,183,0.22)]">
+            <Image src="/images/mockups/splash_screen_mockup2.svg" alt="Kash App" width={230} height={422} className="w-[230px] h-auto block" loading="eager" />
           </div>
         </div>
         <div>
           <div className="inline-block font-display text-[11px] font-bold text-primary bg-primary-muted py-1.5 px-3.5 rounded-full uppercase tracking-[1.2px] mb-4.5">Pour les commerçants</div>
-          <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">On s'occupe de tout pour vous</h2>
-          <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] max-[900px]:max-w-none max-[480px]:text-sm">Kash référence votre commerce et crée votre catalogue digital. Vos produits, vos prix, vos promotions  tout est intégré par notre équipe pour vous offrir une visibilité maximale.</p>
+          <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">On s&apos;occupe de tout pour vous</h2>
+          <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] max-[900px]:max-w-none max-[480px]:text-sm">Kash référence votre commerce et crée votre catalogue digital. Vos produits, vos prix, vos promotions — tout est intégré par notre équipe pour vous offrir une visibilité maximale.</p>
           <ul className="list-none mt-7 flex flex-col gap-4">
             {bullets.map((b, i) => (
               <li key={i} className="flex items-start gap-3 text-[15px] text-gray-500 leading-[1.6]">
