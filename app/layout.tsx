@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Kash",
   },
   description:
-    "Kash r\u00e9f\u00e9rence les commerces locaux en RD Congo. Trouvez les produits et boutiques pr\u00e8s de chez vous, comparez les prix et gagnez du temps.",
+    "Kash référence les commerces locaux en RD Congo. Trouvez les produits et boutiques près de chez vous, comparez les prix et gagnez du temps.",
   keywords: [
     "Kash",
     "commerce local",
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
     siteName: "Kash",
     title: "Kash | Le catalogue digital du commerce local",
     description:
-      "Trouvez les produits et boutiques pr\u00e8s de chez vous en RD Congo. Comparez les prix et gagnez du temps avec Kash.",
+      "Trouvez les produits et boutiques près de chez vous en RD Congo. Comparez les prix et gagnez du temps avec Kash.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Kash | Le catalogue digital du commerce local",
     description:
-      "Trouvez les produits et boutiques pr\u00e8s de chez vous en RD Congo. Comparez les prix et gagnez du temps.",
+      "Trouvez les produits et boutiques près de chez vous en RD Congo. Comparez les prix et gagnez du temps.",
   },
 };
 
