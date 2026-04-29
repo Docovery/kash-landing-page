@@ -17,8 +17,8 @@ export default function HowItWorks() {
         </div>
         <div className="relative mx-auto mb-16 w-[280px] max-[900px]:mb-10 max-[480px]:w-[220px] max-[480px]:mb-8">
           <div className="absolute -inset-15 rounded-full bg-linear-to-br from-primary/15 via-[rgba(26,127,232,0.1)] to-accent/8 blur-[30px]" />
-          <div className="mx-auto relative z-2 animate-[phoneFloatStraight_5s_ease-in-out_infinite] drop-shadow-[0_40px_80px_rgba(0,63,138,0.35)] max-[480px]:w-[200px]">
-            <Image src="/images/mockups/splash_screen_mockup.svg" alt="Kash App" width={260} height={460} className="w-[260px] h-auto block max-[480px]:w-[200px]" />
+          <div style={{ position: "relative", width: "260px", height: "460px" }} className="mx-auto z-2 animate-[phoneFloatStraight_5s_ease-in-out_infinite] drop-shadow-[0_40px_80px_rgba(0,63,138,0.35)] max-[480px]:!w-[200px] max-[480px]:!h-[354px]">
+            <Image src="/images/mockups/splash_screen_mockup.svg" alt="Kash App" fill style={{ objectFit: "contain" }} />
           </div>
         </div>
         <div className="grid grid-cols-3 gap-6 max-w-[900px] mx-auto relative max-[1024px]:grid-cols-2 max-[900px]:grid-cols-1">

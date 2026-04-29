@@ -13,8 +13,8 @@ export default function MerchantSection() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-2 gap-20 items-center max-[1024px]:gap-12 max-[900px]:grid-cols-1 max-[900px]:gap-10">
         <div className="relative flex justify-center max-[900px]:hidden">
           <div className="absolute w-80 h-80 rounded-full bg-[radial-gradient(circle,rgba(0,87,183,0.08)_0%,transparent_70%)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-          <div className="relative z-2 drop-shadow-[0_24px_64px_rgba(0,87,183,0.22)]">
-            <Image src="/images/mockups/splash_screen_mockup2.svg" alt="Kash App" width={230} height={422} className="w-[230px] h-auto block" loading="eager" />
+          <div style={{ position: "relative", width: "230px", height: "422px" }} className="z-2 drop-shadow-[0_24px_64px_rgba(0,87,183,0.22)]">
+            <Image src="/images/mockups/splash_screen_mockup2.svg" alt="Kash App" fill style={{ objectFit: "contain" }} loading="eager" />
           </div>
         </div>
         <div>

@@ -32,8 +32,8 @@ export default function CTAFinal() {
         </div>
         <div className="flex justify-center items-center relative max-[900px]:hidden">
           <div className="absolute w-80 h-80 rounded-full bg-linear-to-br from-primary/15 via-[rgba(26,127,232,0.1)] to-accent/8 blur-[40px]" />
-          <div className="relative z-2 animate-[phoneFloatStraight_5s_ease-in-out_infinite_0.5s] origin-bottom drop-shadow-[0_40px_60px_rgba(0,0,0,0.5)]">
-            <Image src="/images/mockups/splash_screen_mockup.svg" alt="Kash App" width={240} height={440} className="w-[240px] h-auto block" />
+          <div style={{ position: "relative", width: "240px", height: "440px" }} className="z-2 animate-[phoneFloatStraight_5s_ease-in-out_infinite_0.5s] origin-bottom drop-shadow-[0_40px_60px_rgba(0,0,0,0.5)]">
+            <Image src="/images/mockups/splash_screen_mockup.svg" alt="Kash App" fill style={{ objectFit: "contain" }} />
           </div>
         </div>
       </div>
