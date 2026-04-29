@@ -33,10 +33,98 @@ body::before {
   z-index: 9999;
 }
 
-/* ─── ANIMATIONS ─── */
+/* ─── SCROLL REVEAL ANIMATIONS ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* ─── SHIMMER EFFECT FOR ACCENT ELEMENTS ─── */
+.shimmer-accent {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    #FFA07A 25%,
+    var(--color-accent) 50%,
+    #FFA07A 75%,
+    var(--color-accent) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ─── GRADIENT TEXT ─── */
+.gradient-text {
+  background: linear-gradient(135deg, #FF7F50, #FF6347, #FFB347);
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── GLOW RING ANIMATION ─── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 127, 80, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(255, 127, 80, 0); }
+}
+
+.glow-ring {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* ─── EXISTING ANIMATIONS (ENHANCED) ─── */
 @keyframes blobPulse {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.08); opacity: 0.85; }
+  50% { transform: scale(1.12); opacity: 0.8; }
 }
 
 @keyframes phoneFloat {
@@ -46,12 +134,12 @@ body::before {
 
 @keyframes phoneFloatStraight {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-14px); }
 }
 
 @keyframes badgeFloat {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes laserScan {
@@ -68,6 +156,15 @@ body::before {
 @keyframes scrollLogos {
   0% { transform: translateX(0); }
   100% { transform: translateX(-33.333%); }
+}
+
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0) perspective(1000px) rotateX(2deg) rotateY(-1deg);
+  }
+  50% {
+    transform: translateY(-16px) perspective(1000px) rotateX(-1deg) rotateY(2deg);
+  }
 }
 
 .logos-scroll {
@@ -97,9 +194,23 @@ body::before {
   height: 3px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   opacity: 0;
-  transition: opacity .25s;
+  transition: opacity .3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .feature-card-gradient:hover::before { opacity: 1; }
+
+/* ─── FEATURE CARD GLOW ─── */
+.feature-card-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  width: 60%;
+  height: 40px;
+  background: linear-gradient(180deg, rgba(0, 87, 183, 0.06), transparent);
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.feature-card-gradient:hover::after { opacity: 1; }
 
 /* ─── STEP CARD BOTTOM LINE ─── */
 .step-card-line::after {
@@ -110,7 +221,7 @@ body::before {
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform .3s;
+  transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .step-card-line:hover::after { transform: scaleX(1); }
 
@@ -173,11 +284,11 @@ body::before {
   pointer-events: none;
 }
 
-/* ─── FAQ ACCORDION ─── */
+/* ─── FAQ ACCORDION (ENHANCED) ─── */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .35s ease;
+  transition: max-height .4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .faq-open .faq-answer {
   max-height: 300px;
@@ -188,6 +299,15 @@ body::before {
 }
 .faq-open .faq-chevron svg {
   stroke: white;
+}
+
+/* ─── TESTIMONIAL CARD HOVER GLOW ─── */
+.testimonial-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 87, 183, 0.12);
 }
 
 /* ─── MOBILE MENU ─── */
@@ -240,6 +360,37 @@ body::before {
   background: linear-gradient(90deg, white 0%, transparent 8%, transparent 92%, white 100%);
   pointer-events: none;
   z-index: 2;
+}
+
+/* ─── BUTTON HOVER EFFECT ─── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+.btn-primary:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ─── CARD 3D TILT SUBTLE ─── */
+.card-interactive {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-interactive:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(0, 87, 183, 0.12);
 }
 
 @media (max-width: 900px) {

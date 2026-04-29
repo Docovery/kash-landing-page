@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CustomerSection() {
   const rows = [
     { store: "Chez Mama", price: "$3.50", dist: "0.3 km", saving: "" },
@@ -11,6 +13,13 @@ export default function CustomerSection() {
     "Vérifiez la disponibilité avant de vous déplacer, fini les allers-retours inutiles",
     "Gagnez du temps en comparant les prix et les boutiques depuis votre canapé",
     "Ne renoncez plus à un achat faute de savoir où chercher",
+  ];
+
+  const users = [
+    { img: "/images/testimonials/fatou.png", name: "Fatou" },
+    { img: "/images/testimonials/jeanpierre.png", name: "Jean-Pierre" },
+    { img: "/images/testimonials/oumar.png", name: "Oumar" },
+    { img: "/images/testimonials/grace.png", name: "Grace" },
   ];
 
   return (
@@ -40,7 +49,22 @@ export default function CustomerSection() {
               </li>
             ))}
           </ul>
-          <div className="mt-10 max-[480px]:mt-7">
+
+          {/* Social proof row */}
+          <div className="flex items-center gap-3.5 mt-9 max-[480px]:flex-col max-[480px]:items-start max-[480px]:gap-2">
+            <div className="flex -space-x-2.5">
+              {users.map((u, i) => (
+                <div key={i} className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white/30">
+                  <Image src={u.img} alt={u.name} fill style={{ objectFit: "cover" }} />
+                </div>
+              ))}
+            </div>
+            <p className="text-[13px] text-white/60">
+              <strong className="text-white font-semibold">+2 000</strong> utilisateurs économisent chaque jour
+            </p>
+          </div>
+
+          <div className="mt-7 max-[480px]:mt-5">
             <a
               href="#cta"
               className="font-display text-sm font-semibold text-white bg-accent border-none rounded-full py-[15px] px-[34px] cursor-pointer transition-all duration-200 shadow-[0_6px_24px_rgba(255,127,80,0.45)] no-underline inline-block hover:-translate-y-0.5 max-[480px]:w-full max-[480px]:text-center"
@@ -53,9 +77,17 @@ export default function CustomerSection() {
         {/* Right: comparison card */}
         <div className="max-[900px]:mt-2">
           <div className="bg-white/6 border border-white/10 rounded-3xl p-7 backdrop-blur-[12px] max-[480px]:p-4 max-[480px]:rounded-2xl">
-            <div className="font-display text-xs font-bold text-white/55 uppercase tracking-[1px] mb-5">
-              Huile de palme 1L — Comparatif
+            {/* Search header with avatar */}
+            <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/8">
+              <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-accent/40 shrink-0">
+                <Image src="/images/testimonials/fatou.png" alt="Client" fill style={{ objectFit: "cover" }} />
+              </div>
+              <div>
+                <div className="font-display text-xs font-bold text-white/90">Fatou recherche...</div>
+                <div className="text-[10px] text-white/40">Huile de palme 1L — 4 résultats trouvés</div>
+              </div>
             </div>
+
             <div className="grid grid-cols-[1fr_70px_70px_70px] gap-2 pb-2 font-display text-[10px] font-semibold text-white/40 uppercase tracking-[0.8px] max-[480px]:grid-cols-[1fr_55px_55px_55px] max-[480px]:gap-1">
               <span>Boutique</span>
               <span className="text-center">Prix</span>
