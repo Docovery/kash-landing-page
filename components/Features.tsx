@@ -6,7 +6,7 @@ const features = [
   {
     icon: <FiMapPin />,
     title: "Découverte locale",
-    desc: "Explorez les commerçants autour de vous, consultez leurs catalogues, promotions et avis clients — le tout en temps réel, depuis votre quartier.",
+    desc: "Explorez les commerçants autour de vous, consultez leurs catalogues, promotions et avis clients. Le tout en temps réel, depuis votre quartier.",
     color: "from-primary to-blue-500",
   },
   {
@@ -18,7 +18,7 @@ const features = [
   {
     icon: <FiZap />,
     title: "Simplifiez votre quotidien",
-    desc: "Une interface intuitive et ergonomique, pensée pour être prise en main en quelques secondes. Pas besoin de tutoriel — tout est clair, fluide et accessible à tous.",
+    desc: "Une interface intuitive et ergonomique, pensée pour être prise en main en quelques secondes. Pas besoin de tutoriel, tout est clair, fluide et accessible à tous.",
     color: "from-green-500 to-emerald-400",
   },
 ];
@@ -31,7 +31,7 @@ export default function Features() {
           <div className="text-center mb-16 relative">
             <div className="inline-block font-display text-[11px] font-bold text-primary bg-primary-muted py-1.5 px-3.5 rounded-full uppercase tracking-[1.2px] mb-4.5">Fonctionnalités</div>
             <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">Tout ce dont vous avez besoin</h2>
-            <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] mx-auto max-[480px]:text-sm">Une application pensée pour rapprocher commerçants et clients — simple, rapide et efficace.</p>
+            <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] mx-auto max-[480px]:text-sm">Une application pensée pour rapprocher commerçants et clients. Simple, rapide et efficace.</p>
           </div>
         </ScrollReveal>
         <div className="grid grid-cols-3 gap-6 relative max-[1024px]:grid-cols-2 max-[900px]:grid-cols-1">

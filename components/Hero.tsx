@@ -39,7 +39,7 @@ export default function Hero() {
             <div className="flex">
               {["/images/testimonials/amina.png", "/images/testimonials/fatou.png", "/images/testimonials/jeanpierre.png", "/images/testimonials/oumar.png"].map((src, i) => (
                 <div key={i} className="relative w-9 h-9 rounded-full border-[2.5px] border-white/80 -ml-2.5 first:ml-0 overflow-hidden">
-                  <Image src={src} alt="Utilisateur" fill style={{ objectFit: "cover" }} />
+                  <Image src={src} alt="Utilisateur" fill sizes="36px" style={{ objectFit: "cover" }} />
                 </div>
               ))}
             </div>

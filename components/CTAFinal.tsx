@@ -33,7 +33,7 @@ export default function CTAFinal() {
             <div className="flex -space-x-2.5">
               {avatars.map((src, i) => (
                 <div key={i} className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white/30">
-                  <Image src={src} alt="Utilisateur" fill style={{ objectFit: "cover" }} />
+                  <Image src={src} alt="Utilisateur" fill sizes="36px" style={{ objectFit: "cover" }} />
                 </div>
               ))}
             </div>

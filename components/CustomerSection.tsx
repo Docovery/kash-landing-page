@@ -55,7 +55,7 @@ export default function CustomerSection() {
             <div className="flex -space-x-2.5">
               {users.map((u, i) => (
                 <div key={i} className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white/30">
-                  <Image src={u.img} alt={u.name} fill style={{ objectFit: "cover" }} />
+                  <Image src={u.img} alt={u.name} fill sizes="36px" style={{ objectFit: "cover" }} />
                 </div>
               ))}
             </div>
@@ -80,11 +80,11 @@ export default function CustomerSection() {
             {/* Search header with avatar */}
             <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/8">
               <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-accent/40 shrink-0">
-                <Image src="/images/testimonials/fatou.png" alt="Client" fill style={{ objectFit: "cover" }} />
+                <Image src="/images/testimonials/fatou.png" alt="Client" fill sizes="36px" style={{ objectFit: "cover" }} />
               </div>
               <div>
                 <div className="font-display text-xs font-bold text-white/90">Fatou recherche...</div>
-                <div className="text-[10px] text-white/40">Huile de palme 1L — 4 résultats trouvés</div>
+                <div className="text-[10px] text-white/40">Huile de palme 1L : 4 résultats trouvés</div>
               </div>
             </div>
 

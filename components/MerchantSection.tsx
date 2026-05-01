@@ -31,7 +31,7 @@ export default function MerchantSection() {
             <div className="flex -space-x-2 mb-2">
               {merchants.map((m, i) => (
                 <div key={i} className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-white">
-                  <Image src={m.img} alt={m.name} fill style={{ objectFit: "cover" }} />
+                  <Image src={m.img} alt={m.name} fill sizes="32px" style={{ objectFit: "cover" }} />
                 </div>
               ))}
             </div>
@@ -50,7 +50,7 @@ export default function MerchantSection() {
         <div>
           <div className="inline-block font-display text-[11px] font-bold text-primary bg-primary-muted py-1.5 px-3.5 rounded-full uppercase tracking-[1.2px] mb-4.5">Pour les commerçants</div>
           <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">On s&apos;occupe de tout pour vous</h2>
-          <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] max-[900px]:max-w-none max-[480px]:text-sm">Kash référence votre commerce et crée votre catalogue digital. Vos produits, vos prix, vos promotions — tout est intégré par notre équipe pour vous offrir une visibilité maximale.</p>
+          <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] max-[900px]:max-w-none max-[480px]:text-sm">Kash référence votre commerce et crée votre catalogue digital. Vos produits, vos prix, vos promotions : tout est intégré par notre équipe pour vous offrir une visibilité maximale.</p>
           <ul className="list-none mt-7 flex flex-col gap-4">
             {bullets.map((b, i) => (
               <li key={i} className="flex items-start gap-3 text-[15px] text-gray-500 leading-[1.6]">
@@ -65,7 +65,7 @@ export default function MerchantSection() {
             <div className="flex -space-x-2.5">
               {merchants.map((m, i) => (
                 <div key={i} className="relative w-10 h-10 rounded-full overflow-hidden border-[2.5px] border-white shadow-sm">
-                  <Image src={m.img} alt={m.name} fill style={{ objectFit: "cover" }} />
+                  <Image src={m.img} alt={m.name} fill sizes="40px" style={{ objectFit: "cover" }} />
                 </div>
               ))}
             </div>

@@ -43,7 +43,7 @@ export default function AboutPage() {
               Des milliers de commerçants locaux offrent des produits et services de qualité, mais restent invisibles pour les clients de leur quartier. De l&apos;autre côté, les consommateurs peinent à trouver ce qu&apos;ils cherchent et perdent du temps en déplacements inutiles.
             </p>
             <p>
-              Kash est la solution : un catalogue digital qui r\u00e9f\u00e9rence les commerces locaux. Notre \u00e9quipe recense les boutiques, leurs produits et leurs prix pour permettre aux clients de tout trouver depuis leur t\u00e9l\u00e9phone, avant m\u00eame de se d\u00e9placer.
+              Kash est la solution : un catalogue digital qui référence les commerces locaux. Notre équipe recense les boutiques, leurs produits et leurs prix pour permettre aux clients de tout trouver depuis leur téléphone, avant même de se déplacer.
             </p>
             <p>
               Notre vision est simple : <strong className="text-gray-900">digitaliser le commerce local</strong>, une ville à la fois.

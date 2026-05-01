@@ -1,10 +1,12 @@
 import Image from "next/image";
 
 const merchants = [
-  { src: "/merchants/marchant1.png", alt: "Partenaire 1" },
-  { src: "/merchants/marchant2.png", alt: "Partenaire 2" },
-  { src: "/merchants/marchant3.png", alt: "Partenaire 3" },
-  { src: "/merchants/marchant4.jpg", alt: "Partenaire 4" },
+  { src: "/merchants/marchant1.svg", alt: "Partenaire 1" },
+  { src: "/merchants/marchant2.svg", alt: "Partenaire 2" },
+  { src: "/merchants/marchant3.svg", alt: "Partenaire 3" },
+  { src: "/merchants/marchant4.svg", alt: "Partenaire 4" },
+  { src: "/merchants/marchant5.svg", alt: "Partenaire 5" },
+  { src: "/merchants/marchant6.svg", alt: "Partenaire 6" },
 ];
 
 export default function LogosBar() {
@@ -24,14 +26,14 @@ export default function LogosBar() {
           {allLogos.map((m, i) => (
             <div
               key={`${m.src}-${i}`}
-              className="h-10 shrink-0 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 max-[480px]:h-8"
+              className="h-16 shrink-0 opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 max-[900px]:h-14 max-[480px]:h-12"
             >
               <Image
                 src={m.src}
                 alt={m.alt}
-                width={120}
-                height={40}
-                style={{ width: "auto", height: "100%" }}
+                width={600}
+                height={192}
+                style={{ height: "100%", width: "auto" }}
                 className="object-contain"
               />
             </div>

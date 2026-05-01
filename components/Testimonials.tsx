@@ -8,12 +8,12 @@ const StarIcon = ({ featured = false }: { featured?: boolean }) => (
 );
 
 const testimonials = [
-  { text: "Grâce à Kash, ma boutique est visible par des centaines de personnes dans le quartier. Je reçois des clients que je n\u2019aurais jamais touchés autrement.", img: "/images/testimonials/amina.png", name: "Amina Mbaye", meta: "Kinshasa — commerçante" },
-  { text: "Avant Kash, je perdais du temps à chercher où acheter certains produits. Maintenant, je sais exactement où aller et à quel prix avant même de sortir de chez moi.", img: "/images/testimonials/fatou.png", name: "Fatou Konaté", meta: "Lubumbashi — cliente", featured: true },
-  { text: "L\u2019appli est très simple à utiliser. En quelques clics, je trouve les commerces autour de moi avec tous les détails dont j\u2019ai besoin.", img: "/images/testimonials/jeanpierre.png", name: "Jean-Pierre Nkutu", meta: "Goma — client" },
-  { text: "Ce qui m\u2019a convaincu, c\u2019est de pouvoir comparer les prix entre plusieurs boutiques sans me déplacer. Je sais exactement où aller.", img: "/images/testimonials/oumar.png", name: "Oumar Diallo", meta: "Bukavu — client" },
-  { text: "En tant que mère de famille, Kash me facilite la vie. Je trouve ce dont j\u2019ai besoin près de chez moi sans perdre de temps dans les déplacements.", img: "/images/testimonials/grace.png", name: "Grace Samba", meta: "Matadi — cliente" },
-  { text: "Depuis que Kash référence ma boutique, les clients viennent en sachant déjà ce qu\u2019ils veulent. C\u2019est plus simple pour eux et pour moi.", img: "/images/testimonials/moussa.png", name: "Moussa Lamine", meta: "Kisangani — commerçant" },
+  { text: "Grâce à Kash, ma boutique est visible par des centaines de personnes dans le quartier. Je reçois des clients que je n\u2019aurais jamais touchés autrement.", img: "/images/testimonials/amina.png", name: "Amina Mbaye", meta: "Kinshasa, Commerçante" },
+  { text: "Avant Kash, je perdais du temps à chercher où acheter certains produits. Maintenant, je sais exactement où aller et à quel prix avant même de sortir de chez moi.", img: "/images/testimonials/fatou.png", name: "Fatou Konaté", meta: "Lubumbashi, Cliente", featured: true },
+  { text: "L\u2019appli est très simple à utiliser. En quelques clics, je trouve les commerces autour de moi avec tous les détails dont j\u2019ai besoin.", img: "/images/testimonials/jeanpierre.png", name: "Jean-Pierre Nkutu", meta: "Goma, Client" },
+  { text: "Ce qui m\u2019a convaincu, c\u2019est de pouvoir comparer les prix entre plusieurs boutiques sans me déplacer. Je sais exactement où aller.", img: "/images/testimonials/oumar.png", name: "Oumar Diallo", meta: "Bukavu, Client" },
+  { text: "En tant que mère de famille, Kash me facilite la vie. Je trouve ce dont j\u2019ai besoin près de chez moi sans perdre de temps dans les déplacements.", img: "/images/testimonials/grace.png", name: "Grace Samba", meta: "Matadi, Cliente" },
+  { text: "Depuis que Kash référence ma boutique, les clients viennent en sachant déjà ce qu\u2019ils veulent. C\u2019est plus simple pour eux et pour moi.", img: "/images/testimonials/moussa.png", name: "Moussa Lamine", meta: "Kisangani, Commerçant" },
 ];
 
 export default function Testimonials() {
@@ -51,6 +51,7 @@ export default function Testimonials() {
                       src={t.img}
                       alt={t.name}
                       fill
+                      sizes="44px"
                       style={{ objectFit: "cover" }}
                     />
                   </div>
