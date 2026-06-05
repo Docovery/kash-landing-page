@@ -4,12 +4,46 @@ import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "Question générale",
+    message: "",
+  });
 
   const contactInfo = [
     { Icon: FiMail, label: "Email", value: "contact@kashapp.cd" },
     { Icon: FiPhone, label: "Téléphone", value: "+243 XXX XXX XXX" },
     { Icon: FiMapPin, label: "Adresse", value: "Kinshasa, RD Congo" },
   ];
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError("");
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setError("Tous les champs sont requis.");
+      return;
+    }
+
+    const mailtoAddress = "contact@kashapp.cd";
+    const subject = `[KASH] ${formData.subject}`;
+    const body = `Nom: ${formData.name}\nEmail: ${formData.email}\nSujet: ${formData.subject}\n\n${formData.message}`;
+    const mailtoLink = `mailto:${mailtoAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setSubmitted(true);
+    setFormData({ name: "", email: "", subject: "Question générale", message: "" });
+    window.location.href = mailtoLink;
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
     <div className="flex flex-col gap-5 pb-5">
@@ -60,22 +94,54 @@ export default function ContactPage() {
                 <div className="text-5xl mb-4">✅</div>
                 <h3 className="font-display text-xl font-bold text-gray-900 mb-2">Message envoyé !</h3>
                 <p className="text-sm text-gray-500">Nous reviendrons vers vous très bientôt.</p>
+                <button
+                  onClick={() => setSubmitted(false)}
+                  className="mt-6 font-display text-sm font-semibold text-primary hover:text-primary-dark transition-colors"
+                >
+                  Envoyer un autre message
+                </button>
               </div>
             ) : (
-              <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                {error && (
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-3 text-sm text-red-700">
+                    ❌ {error}
+                  </div>
+                )}
                 <div className="grid grid-cols-2 gap-4 max-[480px]:grid-cols-1">
                   <div>
                     <label className="font-display text-xs font-semibold text-gray-600 uppercase tracking-[0.8px] mb-1.5 block">Nom</label>
-                    <input type="text" required placeholder="Votre nom" className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-gray-300" />
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Votre nom"
+                      className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-gray-300"
+                    />
                   </div>
                   <div>
                     <label className="font-display text-xs font-semibold text-gray-600 uppercase tracking-[0.8px] mb-1.5 block">Email</label>
-                    <input type="email" required placeholder="votre@email.com" className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-gray-300" />
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="votre@email.com"
+                      className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-gray-300"
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="font-display text-xs font-semibold text-gray-600 uppercase tracking-[0.8px] mb-1.5 block">Sujet</label>
-                  <select className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all">
+                  <select
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+                  >
                     <option>Question générale</option>
                     <option>Devenir partenaire commerçant</option>
                     <option>Support technique</option>
@@ -84,10 +150,24 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label className="font-display text-xs font-semibold text-gray-600 uppercase tracking-[0.8px] mb-1.5 block">Message</label>
-                  <textarea required rows={5} placeholder="Votre message..." className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all resize-none placeholder:text-gray-300" />
+                  <textarea
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Votre message..."
+                    className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 text-sm text-gray-800 outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all resize-none placeholder:text-gray-300"
+                  />
                 </div>
-                <button type="submit" className="font-display text-sm font-semibold text-white bg-gradient-to-br from-primary to-primary-dark rounded-full py-3.5 px-8 cursor-pointer transition-all shadow-[0_4px_16px_rgba(0,87,183,0.3)] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,87,183,0.4)] self-start max-[480px]:self-stretch max-[480px]:text-center">
-                  Envoyer le message
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`font-display text-sm font-semibold text-white ${
+                    loading ? "bg-gray-400 cursor-not-allowed" : "bg-gradient-to-br from-primary to-primary-dark hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,87,183,0.4)]"
+                  } rounded-full py-3.5 px-8 cursor-pointer transition-all shadow-[0_4px_16px_rgba(0,87,183,0.3)] self-start max-[480px]:self-stretch max-[480px]:text-center`}
+                >
+                  {loading ? "Envoi en cours..." : "Envoyer le message"}
                 </button>
               </form>
             )}
