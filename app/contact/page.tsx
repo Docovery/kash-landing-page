@@ -14,8 +14,8 @@ export default function ContactPage() {
   });
 
   const contactInfo = [
-    { Icon: FiMail, label: "Email", value: "contact@kashapp.cd" },
-    { Icon: FiPhone, label: "Téléphone", value: "+243 XXX XXX XXX" },
+    { Icon: FiMail, label: "Email", value: "kash.observatoire@gmail.com" },
+    { Icon: FiPhone, label: "Téléphone", value: "+243 852 662 508" },
     { Icon: FiMapPin, label: "Adresse", value: "Kinshasa, RD Congo" },
   ];
 

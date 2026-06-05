@@ -6,7 +6,10 @@ import { useEffect, useState } from "react";
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    const raf = window.requestAnimationFrame(() => setMounted(true));
+    return () => window.cancelAnimationFrame(raf);
+  }, []);
 
   return (
     <div className="hero-dots min-h-[calc(100vh-80px)] bg-linear-to-br from-primary-dark via-primary to-primary flex flex-col relative overflow-hidden pt-10 mt-[100px] mx-10 rounded-3xl max-[900px]:mt-20 max-[900px]:mx-3 max-[900px]:min-h-0 max-[480px]:mt-18 max-[480px]:mx-2 max-[480px]:pt-6 max-[480px]:rounded-2xl">
@@ -67,7 +70,7 @@ export default function Hero() {
 
             {/* Phone mockup */}
             <div style={{ position: "relative", width: "260px", height: "476px" }} className="z-2 animate-[phoneFloat_4.5s_ease-in-out_infinite] drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)] [filter:drop-shadow(0_0_40px_rgba(255,127,80,0.25))_drop-shadow(0_40px_60px_rgba(0,0,0,0.45))]">
-              <Image src="/images/mockups/splash_screen_mockup2.svg" alt="Kash App" fill style={{ objectFit: "contain" }} priority />
+              <Image src="/images/mockups/splash_screen1.svg" alt="Kash App" fill style={{ objectFit: "contain" }} priority />
             </div>
 
             {/* Right badge */}
