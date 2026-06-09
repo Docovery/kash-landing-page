@@ -15,7 +15,7 @@ export default function ContactPage() {
 
   const contactInfo = [
     { Icon: FiMail, label: "Email", value: "kash.observatoire@gmail.com" },
-    { Icon: FiPhone, label: "Téléphone", value: "+243 852 662 508" },
+    { Icon: FiPhone, label: "Téléphone", value: "+243 892 312 042" },
     { Icon: FiMapPin, label: "Adresse", value: "Kinshasa, RD Congo" },
   ];
 
