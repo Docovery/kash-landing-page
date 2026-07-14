@@ -70,7 +70,7 @@ export default function Hero() {
 
             {/* Phone mockup */}
             <div style={{ position: "relative", width: "260px", height: "476px" }} className="z-2 animate-[phoneFloat_4.5s_ease-in-out_infinite] drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)] [filter:drop-shadow(0_0_40px_rgba(255,127,80,0.25))_drop-shadow(0_40px_60px_rgba(0,0,0,0.45))]">
-              <Image src="/images/mockups/splash_screen1.svg" alt="Kash App" fill style={{ objectFit: "contain" }} priority />
+              <Image src="/images/mockups/mockup1home.svg" alt="Kash App" fill style={{ objectFit: "contain" }} priority />
             </div>
 
             {/* Right badge */}
