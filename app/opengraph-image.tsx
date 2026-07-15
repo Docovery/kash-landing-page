@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Kash — Le catalogue digital du commerce local en RD Congo";
+export const alt = "Kash | Trouvez les commerces et produits locaux en RD Congo";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
