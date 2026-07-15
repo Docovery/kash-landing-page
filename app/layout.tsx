@@ -3,6 +3,7 @@ import { Sora, DM_Sans } from "next/font/google";
 import "./../styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ClarityInit from "@/components/ClarityInit";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -93,6 +94,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        <ClarityInit />
         <Navbar />
         <main>{children}</main>
         <Footer />
