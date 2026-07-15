@@ -23,8 +23,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kashapp.tech"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
-    default: "Kash | Le catalogue digital du commerce local",
+    default: "Kash | Trouvez les commerces et produits locaux en RD Congo",
     template: "%s | Kash",
   },
   description:
@@ -60,6 +64,23 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Kash",
+  url: "https://kashapp.tech",
+  logo: "https://kashapp.tech/icon",
+  description:
+    "Kash référence les commerces locaux en RD Congo. Trouvez les produits et boutiques près de chez vous, comparez les prix et gagnez du temps.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    email: "kash.observatoire@gmail.com",
+    telephone: "+243892312042",
+    availableLanguage: "French",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -68,6 +89,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${sora.variable} ${dmSans.variable}`} data-scroll-behavior="smooth">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

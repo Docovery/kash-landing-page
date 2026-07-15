@@ -28,7 +28,7 @@ export default function ContactPage() {
       return;
     }
 
-    const mailtoAddress = "contact@kashapp.cd";
+    const mailtoAddress = "kash.observatoire@gmail.com";
     const subject = `[KASH] ${formData.subject}`;
     const body = `Nom: ${formData.name}\nEmail: ${formData.email}\nSujet: ${formData.subject}\n\n${formData.message}`;
     const mailtoLink = `mailto:${mailtoAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

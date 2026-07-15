@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "\u00c0 propos",
   description:
     "Découvrez la mission de Kash : digitaliser le commerce local en référençant les boutiques et produits de proximité.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "À propos | Kash",
     description:

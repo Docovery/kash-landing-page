@@ -25,7 +25,7 @@ export default function Hero() {
         {/* Left content with staggered entrance */}
         <div>
           <h1 className={`font-display text-[clamp(38px,4.8vw,62px)] font-extrabold text-white leading-[1.06] tracking-[-2px] mb-5.5 max-[480px]:text-[32px] max-[480px]:tracking-[-1px] max-[480px]:mb-4 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            Explorez.<br />Economisez.<br /><em className="not-italic gradient-text">Connectez.</em>
+            Explorez le commerce local.<br />Économisez.<br /><em className="not-italic gradient-text">Connectez.</em>
           </h1>
           <p className={`text-base font-light text-white/78 max-w-[420px] leading-[1.75] mb-9.5 max-[900px]:mx-auto max-[900px]:max-w-[520px] max-[480px]:text-sm max-[480px]:mb-7 transition-all duration-700 delay-150 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             Kash connecte les commerces locaux, vous aide à trouver les produits dont vous avez besoin et vous fait économiser de l&apos;argent.
