@@ -49,8 +49,9 @@ export default function Footer() {
         <div className="flex justify-between items-center text-xs text-white/30 font-body max-[900px]:flex-col max-[900px]:gap-3 max-[480px]:text-center">
           <span>© {new Date().getFullYear()} Kash. Tous droits réservés.</span>
           <div className="flex gap-6 max-[480px]:flex-col max-[480px]:gap-2 max-[480px]:items-center">
-            <a href="#" className="text-white/30 no-underline text-xs hover:text-white/60 transition-colors">Politique de confidentialité</a>
-            <a href="#" className="text-white/30 no-underline text-xs hover:text-white/60 transition-colors">Conditions générales</a>
+            <a href="/privacy" className="text-white/30 no-underline text-xs hover:text-white/60 transition-colors">Politique de confidentialité</a>
+            <a href="/terms" className="text-white/30 no-underline text-xs hover:text-white/60 transition-colors">Conditions générales</a>
+            <a href="/data-deletion" className="text-white/30 no-underline text-xs hover:text-white/60 transition-colors">Suppression de compte</a>
           </div>
         </div>
       </div>
