@@ -7,7 +7,7 @@ import KashLogo from "./KashLogo";
 const footerCols = [
   { title: "Application", links: [{ label: "Fonctionnalités", href: "#features" }, { label: "Télécharger", href: "#cta" }, { label: "Mises à jour", href: "/updates" }] },
   { title: "À propos", links: [{ label: "Notre mission", href: "/about" }, { label: "L'équipe", href: "/team" }] },
-  { title: "Contact", links: [{ label: "Support", href: "/support" }, { label: "Partenariats", href: "/partnerships" }, { label: "Recrutement", href: "/recruitment" }] },
+  { title: "Contact", links: [{ label: "Support", href: "/contact" }, { label: "Partenariats", href: "/partnerships" }, { label: "Recrutement", href: "/recruitment" }] },
 ];
 
 const socials = [
