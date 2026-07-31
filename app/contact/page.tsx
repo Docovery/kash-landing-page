@@ -14,7 +14,7 @@ export default function ContactPage() {
   });
 
   const contactInfo = [
-    { Icon: FiMail, label: "Email", value: "kash.observatoire@gmail.com" },
+    { Icon: FiMail, label: "Email", value: "contact@kashapp.tech" },
     { Icon: FiPhone, label: "Téléphone", value: "+243 892 312 042" },
     { Icon: FiMapPin, label: "Adresse", value: "Kinshasa, RD Congo" },
   ];
@@ -28,7 +28,7 @@ export default function ContactPage() {
       return;
     }
 
-    const mailtoAddress = "kash.observatoire@gmail.com";
+    const mailtoAddress = "contact@kashapp.tech";
     const subject = `[KASH] ${formData.subject}`;
     const body = `Nom: ${formData.name}\nEmail: ${formData.email}\nSujet: ${formData.subject}\n\n${formData.message}`;
     const mailtoLink = `mailto:${mailtoAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
