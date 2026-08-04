@@ -53,13 +53,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_CD",
     siteName: "Kash",
-    title: "Kash | Le catalogue digital du commerce local",
+    url: "https://kashapp.tech",
+    title: "Kash | Trouvez les commerces et produits locaux en RD Congo",
     description:
       "Trouvez les produits et boutiques près de chez vous en RD Congo. Comparez les prix et gagnez du temps avec Kash.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kash | Le catalogue digital du commerce local",
+    title: "Kash | Trouvez les commerces et produits locaux en RD Congo",
     description:
       "Trouvez les produits et boutiques près de chez vous en RD Congo. Comparez les prix et gagnez du temps.",
   },
@@ -70,13 +71,13 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "Kash",
   url: "https://kashapp.tech",
-  logo: "https://kashapp.tech/icon",
+  logo: "https://kashapp.tech/logo.png",
   description:
     "Kash référence les commerces locaux en RD Congo. Trouvez les produits et boutiques près de chez vous, comparez les prix et gagnez du temps.",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    email: "kash.observatoire@gmail.com",
+    email: "contact@kashapp.tech",
     telephone: "+243892312042",
     availableLanguage: "French",
   },
