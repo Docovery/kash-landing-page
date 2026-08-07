@@ -1,17 +1,11 @@
 import Image from "next/image";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
+import { FiSmartphone, FiMapPin } from "react-icons/fi";
 
 export default function CTAFinal() {
   const stores = [
     { Icon: FaApple, sub: "Télécharger sur", name: "App Store" },
     { Icon: FaGooglePlay, sub: "Disponible sur", name: "Google Play" },
-  ];
-
-  const avatars = [
-    "/images/testimonials/amina.png",
-    "/images/testimonials/fatou.png",
-    "/images/testimonials/jeanpierre.png",
-    "/images/testimonials/oumar.png",
   ];
 
   return (
@@ -25,22 +19,8 @@ export default function CTAFinal() {
             Kash est disponible<br />sur tous vos appareils
           </h2>
           <p className="text-base font-light text-white/68 mb-8 leading-[1.75] max-w-[440px] max-[900px]:max-w-none max-[480px]:text-sm max-[480px]:mb-6">
-            Rejoignez des milliers d&apos;utilisateurs qui trouvent chaque jour les meilleurs produits et commerces près de chez eux.
+            Rejoignez les premiers utilisateurs de Kash et découvrez les commerces de votre quartier, leurs produits et leurs prix.
           </p>
-
-          {/* Social proof avatars */}
-          <div className="flex items-center gap-3 mb-8 max-[480px]:mb-6">
-            <div className="flex -space-x-2.5">
-              {avatars.map((src, i) => (
-                <div key={i} className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white/30">
-                  <Image src={src} alt="Utilisateur" fill sizes="36px" style={{ objectFit: "cover" }} />
-                </div>
-              ))}
-            </div>
-            <p className="text-[13px] text-white/60">
-              <strong className="text-white font-semibold">+2 000</strong> utilisateurs actifs
-            </p>
-          </div>
 
           <div className="flex gap-3.5 flex-wrap max-[480px]:flex-col">
             {stores.map((store, i) => (
@@ -62,16 +42,26 @@ export default function CTAFinal() {
             <Image src="/images/mockups/splash_screen_mockup.svg" alt="Kash App" fill style={{ objectFit: "contain" }} />
           </div>
 
-          {/* Floating download badge */}
-          <div className="absolute -left-4 top-[35%] z-3 bg-white rounded-2xl py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] animate-[badgeFloat_3.5s_ease-in-out_infinite_0.8s]">
-            <div className="font-display text-lg font-extrabold text-green-600 leading-none">4.9★</div>
-            <div className="text-[9px] text-gray-400 font-display font-medium mt-0.5">1 240 avis</div>
+          {/* Floating badge: platforms */}
+          <div className="absolute -left-4 top-[35%] z-3 bg-white rounded-2xl py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] flex items-center gap-2.5 animate-[badgeFloat_3.5s_ease-in-out_infinite_0.8s]">
+            <div className="w-9 h-9 rounded-xl bg-primary-light flex items-center justify-center shrink-0">
+              <FiSmartphone className="w-4.5 h-4.5 text-primary" />
+            </div>
+            <div>
+              <div className="font-display text-[11px] font-bold text-gray-900 whitespace-nowrap">Gratuit</div>
+              <div className="text-[9px] text-gray-400 whitespace-nowrap">iOS &amp; Android</div>
+            </div>
           </div>
 
-          {/* Floating stats badge */}
-          <div className="absolute -right-6 top-[55%] z-3 bg-white rounded-2xl py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] animate-[badgeFloat_3.5s_ease-in-out_infinite_1.5s]">
-            <div className="font-display text-lg font-extrabold text-primary leading-none">+2K</div>
-            <div className="text-[9px] text-gray-400 font-display font-medium mt-0.5">téléchargements</div>
+          {/* Floating badge: proximity */}
+          <div className="absolute -right-6 top-[55%] z-3 bg-white rounded-2xl py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] flex items-center gap-2.5 animate-[badgeFloat_3.5s_ease-in-out_infinite_1.5s]">
+            <div className="w-9 h-9 rounded-xl bg-[#FFF3EE] flex items-center justify-center shrink-0">
+              <FiMapPin className="w-4.5 h-4.5 text-accent" />
+            </div>
+            <div>
+              <div className="font-display text-[11px] font-bold text-gray-900 whitespace-nowrap">Commerces</div>
+              <div className="text-[9px] text-gray-400 whitespace-nowrap">près de chez vous</div>
+            </div>
           </div>
         </div>
       </div>

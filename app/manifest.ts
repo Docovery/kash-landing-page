@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Kash — Le catalogue digital du commerce local",
+    name: "Kash — Les commerces de votre quartier",
     short_name: "Kash",
     description:
-      "Kash référence les commerces locaux en RD Congo. Trouvez les produits et boutiques près de chez vous, comparez les prix et gagnez du temps.",
+      "Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

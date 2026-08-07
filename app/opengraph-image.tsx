@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Kash | Trouvez les commerces et produits locaux en RD Congo";
+export const alt = "Kash | Trouvez les produits et commerces autour de vous en RD Congo";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -63,7 +63,7 @@ export default function Image() {
             textAlign: "center",
           }}
         >
-          Le catalogue digital du commerce local
+          Les commerces de votre quartier
         </div>
         <div
           style={{
@@ -74,7 +74,7 @@ export default function Image() {
             textAlign: "center",
           }}
         >
-          Trouvez les produits et boutiques près de chez vous en RD Congo
+          Leurs produits, leurs prix et leurs coordonnées, sur une seule app
         </div>
         <div
           style={{

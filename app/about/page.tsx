@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "\u00c0 propos",
   description:
-    "Découvrez la mission de Kash : digitaliser le commerce local en référençant les boutiques et produits de proximité.",
+    "Découvrez la mission de Kash : donner de la visibilité aux commerces de proximité et permettre à chacun de trouver les produits autour de lui.",
   alternates: {
     canonical: "/about",
   },
@@ -46,10 +46,10 @@ export default function AboutPage() {
               Des milliers de commerçants locaux offrent des produits et services de qualité, mais restent invisibles pour les clients de leur quartier. De l&apos;autre côté, les consommateurs peinent à trouver ce qu&apos;ils cherchent et perdent du temps en déplacements inutiles.
             </p>
             <p>
-              Kash est la solution : un catalogue digital qui référence les commerces locaux. Notre équipe recense les boutiques, leurs produits et leurs prix pour permettre aux clients de tout trouver depuis leur téléphone, avant même de se déplacer.
+              Kash est une plateforme de visibilité pour le commerce de proximité. Les commerçants y créent leur vitrine digitale — leurs produits, leurs prix, leurs promotions et leurs coordonnées — et les clients y recherchent ce dont ils ont besoin avant de contacter le commerce directement.
             </p>
             <p>
-              Notre vision est simple : <strong className="text-gray-900">digitaliser le commerce local</strong>, une ville à la fois.
+              Notre vision est simple : <strong className="text-gray-900">rendre visible le commerce local</strong>, une ville à la fois.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-1">
             {[
               { Icon: FiUsers, title: "Proximité", desc: "Nous croyons au pouvoir du commerce local et de la communauté." },
-              { Icon: FiShield, title: "Confiance", desc: "Informations fiables, commerçants vérifiés, données sécurisées." },
+              { Icon: FiShield, title: "Transparence", desc: "Prix affichés avec leur date de mise à jour, et données sécurisées." },
               { Icon: FiZap, title: "Innovation", desc: "Nous utilisons la technologie pour simplifier le quotidien de chacun." },
             ].map((v, i) => (
               <div key={i} className="bg-white rounded-3xl p-8 border border-gray-200 text-center hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,87,183,0.14)] transition-all group max-[480px]:p-6 max-[480px]:rounded-2xl">

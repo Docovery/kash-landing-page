@@ -1,6 +1,6 @@
 # Kash | Landing Page
 
-**Kash** connects local merchants with customers. Browse shops, compare prices, and save money.
+**Kash** gives local merchants a digital storefront. Search for a product, discover which nearby shops list it, see their displayed prices and contact them directly.
 
 ## Tech Stack
 

@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+// N'afficher ici que les logos de commerces réellement enregistrés sur Kash,
+// et uniquement avec leur autorisation.
 const merchants = [
   { src: "/merchants/marchant1.svg", alt: "Partenaire 1" },
   { src: "/merchants/marchant2.svg", alt: "Partenaire 2" },
@@ -17,7 +19,7 @@ export default function LogosBar() {
     <div className="bg-white py-10 px-6 border-b border-gray-100 relative overflow-hidden mx-10 rounded-3xl max-[900px]:py-8 max-[900px]:mx-3 max-[480px]:mx-2 max-[480px]:py-6 max-[480px]:px-3 max-[480px]:rounded-2xl">
       {/* Centered title */}
       <p className="font-display text-[11px] font-semibold text-gray-400 uppercase tracking-[1.8px] text-center mb-7 max-[480px]:text-[10px] max-[480px]:tracking-[1.2px] max-[480px]:mb-5">
-        Ils nous font confiance
+        Des commerces déjà présents sur Kash
       </p>
 
       {/* Infinite scroll track */}

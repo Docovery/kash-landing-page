@@ -1,30 +1,26 @@
 import Image from "next/image";
+import { FiSearch, FiPhone, FiClock } from "react-icons/fi";
 
 export default function CustomerSection() {
-  const rows = [
-    { store: "Chez Mama", price: "$3.50", dist: "0.3 km", saving: "" },
-    { store: "Marché Central", price: "$2.80", dist: "1.2 km", saving: "-$0.70", best: true },
-    { store: "Shoprite", price: "$3.20", dist: "2.1 km", saving: "-$0.30" },
-    { store: "Kin Mart", price: "$3.80", dist: "0.8 km", saving: "" },
+  // Exemple illustratif : commerces génériques, prix en francs congolais,
+  // aucun calcul d'économie, date de dernière mise à jour affichée.
+  const results = [
+    { store: "Commerce A", area: "Ngaliema", dist: "0,4 km", price: "8 500 FC" },
+    { store: "Commerce B", area: "Gombe", dist: "1,2 km", price: "9 000 FC" },
+    { store: "Commerce C", area: "Bandalungwa", dist: "2,1 km", price: "8 900 FC" },
   ];
+
+  const lastUpdate = "2 août 2026";
 
   const bullets = [
-    "Trouvez instantanément où acheter un produit précis près de chez vous",
-    "Vérifiez la disponibilité avant de vous déplacer, fini les allers-retours inutiles",
-    "Gagnez du temps en comparant les prix et les boutiques depuis votre canapé",
-    "Ne renoncez plus à un achat faute de savoir où chercher",
-  ];
-
-  const users = [
-    { img: "/images/testimonials/fatou.png", name: "Fatou" },
-    { img: "/images/testimonials/jeanpierre.png", name: "Jean-Pierre" },
-    { img: "/images/testimonials/oumar.png", name: "Oumar" },
-    { img: "/images/testimonials/grace.png", name: "Grace" },
+    "Recherchez un produit et voyez les commerces qui le référencent près de chez vous",
+    "Consultez les prix affichés ainsi que la date de leur dernière mise à jour",
+    "Contactez directement le commerce pour confirmer la disponibilité avant de vous déplacer",
   ];
 
   return (
     <section
-      className="compare-stripes bg-linear-to-br from-primary-dark via-primary to-primary relative overflow-hidden rounded-3xl py-25 px-15 mx-10 max-[1024px]:px-10 max-[900px]:py-16 max-[900px]:px-6 max-[900px]:mx-3 max-[480px]:py-12 max-[480px]:px-4 max-[480px]:mx-2"
+      className="compare-stripes bg-linear-to-br from-primary-dark via-primary to-primary relative overflow-hidden rounded-3xl py-25 px-15 mx-10 max-[1024px]:px-10 max-[900px]:py-16 max-[900px]:px-6 max-[900px]:mx-3 max-[480px]:py-12 max-[480px]:px-4 max-[480px]:mx-2 max-[480px]:rounded-2xl"
       id="about"
     >
       <div className="absolute top-[-200px] right-[-200px] w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(255,127,80,0.18)_0%,transparent_65%)] pointer-events-none" />
@@ -36,10 +32,10 @@ export default function CustomerSection() {
             Pour les clients
           </div>
           <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-white leading-[1.1] tracking-tight mb-4 max-[480px]:text-[26px]">
-            Trouvez ce que vous cherchez, sans perdre de temps
+            Cherchez un produit, découvrez qui le propose
           </h2>
-          <p className="text-base font-light text-white/70 leading-[1.75] max-w-[520px] max-[900px]:max-w-none">
-            Plus besoin de vous déplacer au hasard. Kash vous montre les produits disponibles autour de vous, avec les prix et les distances pour chaque boutique.
+          <p className="text-base font-light text-white/70 leading-[1.75] max-w-[520px] max-[900px]:max-w-none max-[480px]:text-sm">
+            Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Vous voyez qui référence ce que vous cherchez, puis vous contactez le commerce directement.
           </p>
           <ul className="list-none mt-7 flex flex-col gap-4">
             {bullets.map((b, i) => (
@@ -50,68 +46,73 @@ export default function CustomerSection() {
             ))}
           </ul>
 
-          {/* Social proof row */}
-          <div className="flex items-center gap-3.5 mt-9 max-[480px]:flex-col max-[480px]:items-start max-[480px]:gap-2">
-            <div className="flex -space-x-2.5">
-              {users.map((u, i) => (
-                <div key={i} className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white/30">
-                  <Image src={u.img} alt={u.name} fill sizes="36px" style={{ objectFit: "cover" }} />
-                </div>
-              ))}
-            </div>
-            <p className="text-[13px] text-white/60">
-              <strong className="text-white font-semibold">+2 000</strong> utilisateurs économisent chaque jour
-            </p>
-          </div>
-
-          <div className="mt-7 max-[480px]:mt-5">
+          <div className="mt-9 flex flex-wrap items-center gap-4 max-[480px]:mt-7">
             <a
               href="#cta"
               className="font-display text-sm font-semibold text-white bg-accent border-none rounded-full py-[15px] px-[34px] cursor-pointer transition-all duration-200 shadow-[0_6px_24px_rgba(255,127,80,0.45)] no-underline inline-block hover:-translate-y-0.5 max-[480px]:w-full max-[480px]:text-center"
             >
               Télécharger l&apos;app
             </a>
+            <span className="text-[13px] text-white/60 max-[480px]:text-center max-[480px]:w-full">
+              Rejoignez les premiers utilisateurs de Kash
+            </span>
           </div>
         </div>
 
-        {/* Right: comparison card */}
+        {/* Right: search example card */}
         <div className="max-[900px]:mt-2">
           <div className="bg-white/6 border border-white/10 rounded-3xl p-7 backdrop-blur-[12px] max-[480px]:p-4 max-[480px]:rounded-2xl">
-            {/* Search header with avatar */}
+            {/* Search header */}
             <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/8">
               <div className="relative w-9 h-9 rounded-full overflow-hidden ring-2 ring-accent/40 shrink-0">
-                <Image src="/images/testimonials/fatou.png" alt="Client" fill sizes="36px" style={{ objectFit: "cover" }} />
+                <Image src="/images/testimonials/fatou.png" alt="" fill sizes="36px" style={{ objectFit: "cover" }} />
               </div>
-              <div>
-                <div className="font-display text-xs font-bold text-white/90">Fatou recherche...</div>
-                <div className="text-[10px] text-white/40">Huile de palme 1L : 4 résultats trouvés</div>
+              <div className="min-w-0 flex-1">
+                <div className="font-display text-xs font-bold text-white/90">Fatou recherche&hellip;</div>
+                <div className="text-[10px] text-white/40 truncate">3 commerces référencent ce produit</div>
               </div>
+              <span className="font-display text-[9px] font-bold text-white/50 uppercase tracking-[0.8px] border border-white/15 rounded-full py-1 px-2 shrink-0">
+                Exemple
+              </span>
             </div>
 
-            <div className="grid grid-cols-[1fr_70px_70px_70px] gap-2 pb-2 font-display text-[10px] font-semibold text-white/40 uppercase tracking-[0.8px] max-[480px]:grid-cols-[1fr_55px_55px_55px] max-[480px]:gap-1">
-              <span>Boutique</span>
-              <span className="text-center">Prix</span>
-              <span className="text-center">Distance</span>
-              <span className="text-center">Économie</span>
+            {/* Search query */}
+            <div className="flex items-center gap-2.5 bg-white/8 border border-white/10 rounded-xl py-3 px-3.5 mb-5 max-[480px]:mb-4 max-[480px]:py-2.5">
+              <FiSearch className="w-4 h-4 text-white/45 shrink-0" />
+              <span className="font-display text-[13px] font-semibold text-white/90 truncate max-[480px]:text-xs">Huile de palme 1 L</span>
             </div>
-            {rows.map((r, i) => (
-              <div
-                key={i}
-                className="grid grid-cols-[1fr_70px_70px_70px] gap-2 py-[11px] border-b border-white/7 last:border-b-0 items-center max-[480px]:grid-cols-[1fr_55px_55px_55px] max-[480px]:gap-1 max-[480px]:py-2"
-              >
-                <span className="font-display text-xs text-white/85 font-semibold max-[480px]:text-[11px] truncate">{r.store}</span>
-                <span className={`text-xs text-center max-[480px]:text-[11px] ${r.best ? "text-green-400 font-bold bg-green-400/10 rounded-md py-0.5 px-1 font-display" : "text-white/60"}`}>
-                  {r.price}
-                </span>
-                <span className="text-xs text-white/60 text-center max-[480px]:text-[11px]">{r.dist}</span>
-                <span className={`text-xs text-center max-[480px]:text-[11px] ${r.best ? "text-green-400 font-bold bg-green-400/10 rounded-md py-0.5 px-1 font-display" : "text-white/60"}`}>
-                  {r.saving}
-                </span>
+
+            {/* Results */}
+            <div className="flex flex-col gap-2">
+              {results.map((r, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 bg-white/5 border border-white/8 rounded-xl py-3 px-3.5 max-[480px]:py-2.5 max-[480px]:px-3 max-[480px]:gap-2"
+                >
+                  <div className="min-w-0 flex-1">
+                    <div className="font-display text-[13px] font-semibold text-white/90 truncate max-[480px]:text-xs">{r.store}</div>
+                    <div className="text-[11px] text-white/40 truncate max-[480px]:text-[10px]">{r.area} &middot; {r.dist}</div>
+                  </div>
+                  <span className="font-display text-[13px] font-bold text-white whitespace-nowrap max-[480px]:text-xs">{r.price}</span>
+                  <span
+                    aria-hidden="true"
+                    className="w-8 h-8 rounded-lg bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 max-[480px]:w-7 max-[480px]:h-7"
+                  >
+                    <FiPhone className="w-3.5 h-3.5 text-accent" />
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Last price update + availability disclaimer */}
+            <div className="mt-5 border-t border-white/8 pt-4 flex flex-col gap-2 max-[480px]:mt-4 max-[480px]:pt-3">
+              <div className="flex items-center gap-2 text-[11px] text-white/50">
+                <FiClock className="w-3.5 h-3.5 shrink-0" />
+                <span>Dernière mise à jour des prix : {lastUpdate}</span>
               </div>
-            ))}
-            <div className="mt-5 bg-accent/12 border border-accent/28 rounded-xl py-4 px-5 flex justify-between items-center max-[480px]:py-3 max-[480px]:px-3.5 max-[480px]:mt-3">
-              <span className="text-[13px] text-white/75 font-medium font-display max-[480px]:text-xs">Économie sur 8 articles</span>
-              <span className="font-display text-[22px] font-extrabold text-accent max-[480px]:text-lg">$4.20</span>
+              <p className="text-[11px] text-white/40 leading-[1.5]">
+                Prix communiqués par les commerces, à titre indicatif. Contactez le commerce pour confirmer la disponibilité.
+              </p>
             </div>
           </div>
         </div>

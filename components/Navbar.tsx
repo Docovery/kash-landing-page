@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className={`mobile-overlay${menuOpen ? " active" : ""}`} onClick={closeMenu} />
       <div className={`mobile-panel${menuOpen ? " active" : ""}`}>
         {[
-          { label: "Fonctionnalités", href: "/#features" },
+          { label: "La plateforme", href: "/#features" },
           { label: "Comment ça marche", href: "/#how-works" },
           { label: "À propos", href: "/about" },
           { label: "Contact", href: "/contact" },
@@ -55,7 +55,7 @@ export default function Navbar() {
         </Link>
         <ul className="flex gap-9 list-none max-[900px]:hidden">
           {[
-            { label: "Fonctionnalités", href: "/#features" },
+            { label: "La plateforme", href: "/#features" },
             { label: "Comment ça marche", href: "/#how-works" },
             { label: "À propos", href: "/about" },
             { label: "Contact", href: "/contact" },

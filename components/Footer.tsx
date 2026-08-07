@@ -1,19 +1,18 @@
 "use client";
 
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { FiSend } from "react-icons/fi";
 import KashLogo from "./KashLogo";
 
 const footerCols = [
-  { title: "Application", links: [{ label: "Fonctionnalités", href: "#features" }, { label: "Télécharger", href: "#cta" }, { label: "Mises à jour", href: "/updates" }] },
-  { title: "À propos", links: [{ label: "Notre mission", href: "/about" }, { label: "L'équipe", href: "/team" }] },
-  { title: "Contact", links: [{ label: "Support", href: "/contact" }, { label: "Partenariats", href: "/partnerships" }, { label: "Recrutement", href: "/recruitment" }] },
+  { title: "Application", links: [{ label: "La plateforme", href: "/#features" }, { label: "Comment ça marche", href: "/#how-works" }, { label: "Télécharger", href: "/#cta" }] },
+  { title: "À propos", links: [{ label: "Notre mission", href: "/about" }, { label: "Questions fréquentes", href: "/#faq" }] },
+  { title: "Contact", links: [{ label: "Nous écrire", href: "/contact" }, { label: "Référencer mon commerce", href: "/contact" }] },
 ];
 
 const socials = [
-  { Icon: FaFacebookF },
-  { Icon: FaTwitter },
-  { Icon: FaInstagram },
+  { Icon: FaFacebookF, label: "Facebook" },
+  { Icon: FaTwitter, label: "Twitter" },
+  { Icon: FaInstagram, label: "Instagram" },
 ];
 
 export default function Footer() {
@@ -25,10 +24,10 @@ export default function Footer() {
             <div className="flex items-center mb-3 [&_svg]:h-10 [&_svg]:w-auto">
               <KashLogo invert />
             </div>
-            <p className="text-[13px] leading-[1.7] text-white/40 mb-5.5">Connectez commerçants et clients. Explorez, économisez et découvrez les meilleurs produits près de chez vous.</p>
+            <p className="text-[13px] leading-[1.7] text-white/40 mb-5.5">Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées, sur une seule application.</p>
             <div className="flex gap-2.5">
-              {socials.map(({ Icon }, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-[10px] bg-white/7 flex items-center justify-center cursor-pointer transition-colors hover:bg-primary">
+              {socials.map(({ Icon, label }, i) => (
+                <a key={i} href="#" aria-label={label} className="w-9 h-9 rounded-[10px] bg-white/7 flex items-center justify-center cursor-pointer transition-colors hover:bg-primary">
                   <Icon className="w-4 h-4 text-white/65" />
                 </a>
               ))}

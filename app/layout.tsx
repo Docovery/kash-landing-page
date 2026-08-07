@@ -29,18 +29,19 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   title: {
-    default: "Kash | Trouvez les commerces et produits locaux en RD Congo",
+    default: "Kash | Trouvez les produits et commerces autour de vous en RD Congo",
     template: "%s | Kash",
   },
   description:
-    "Kash référence les commerces locaux en RD Congo. Trouvez les produits et boutiques près de chez vous, comparez les prix et gagnez du temps.",
+    "Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
   keywords: [
     "Kash",
     "commerce local",
     "RD Congo",
-    "catalogue digital",
     "Kinshasa",
-    "comparer prix",
+    "vitrine digitale",
+    "trouver un produit",
+    "commerçants",
     "boutiques",
     "produits locaux",
   ],
@@ -54,15 +55,15 @@ export const metadata: Metadata = {
     locale: "fr_CD",
     siteName: "Kash",
     url: "https://kashapp.tech",
-    title: "Kash | Trouvez les commerces et produits locaux en RD Congo",
+    title: "Kash | Trouvez les produits et commerces autour de vous en RD Congo",
     description:
-      "Trouvez les produits et boutiques près de chez vous en RD Congo. Comparez les prix et gagnez du temps avec Kash.",
+      "Recherchez un produit, découvrez les commerces de votre quartier qui le proposent, consultez leurs prix et contactez-les directement.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kash | Trouvez les commerces et produits locaux en RD Congo",
+    title: "Kash | Trouvez les produits et commerces autour de vous en RD Congo",
     description:
-      "Trouvez les produits et boutiques près de chez vous en RD Congo. Comparez les prix et gagnez du temps.",
+      "Recherchez un produit, découvrez les commerces de votre quartier qui le proposent, consultez leurs prix et contactez-les directement.",
   },
 };
 
@@ -73,7 +74,7 @@ const organizationJsonLd = {
   url: "https://kashapp.tech",
   logo: "https://kashapp.tech/logo.png",
   description:
-    "Kash référence les commerces locaux en RD Congo. Trouvez les produits et boutiques près de chez vous, comparez les prix et gagnez du temps.",
+    "Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",

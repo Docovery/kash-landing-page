@@ -4,7 +4,7 @@ import Features from "../components/Features";
 import MerchantSection from "../components/MerchantSection";
 import CustomerSection from "../components/CustomerSection";
 import HowItWorks from "../components/HowItWorks";
-import Testimonials from "../components/Testimonials";
+import UseCases from "../components/UseCases";
 import FAQ from "../components/FAQ";
 import CTAFinal from "../components/CTAFinal";
 import { faqData } from "../components/faqData";
@@ -35,7 +35,7 @@ export default function Home() {
       <MerchantSection />
       <CustomerSection />
       <HowItWorks />
-      <Testimonials />
+      <UseCases />
       <FAQ />
       <CTAFinal />
     </div>

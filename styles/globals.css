@@ -263,8 +263,8 @@ body::before {
   pointer-events: none;
 }
 
-/* ─── FEATURED TESTIMONIAL BLOB ─── */
-.testimonial-featured::before {
+/* ─── FEATURED USE CASE BLOB ─── */
+.usecase-featured::before {
   content: '';
   position: absolute;
   top: -40px; right: -40px;
@@ -301,11 +301,11 @@ body::before {
   stroke: white;
 }
 
-/* ─── TESTIMONIAL CARD HOVER GLOW ─── */
-.testimonial-card {
+/* ─── USE CASE CARD HOVER GLOW ─── */
+.usecase-card {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.testimonial-card:hover {
+.usecase-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 87, 183, 0.12);
 }

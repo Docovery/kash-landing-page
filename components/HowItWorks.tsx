@@ -4,9 +4,9 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function HowItWorks() {
   const steps = [
-    { num: "01", title: "Téléchargez Kash", desc: "Disponible sur iOS et Android. Créez votre compte gratuitement en quelques secondes et accédez au catalogue de votre ville.", accent: "text-primary" },
-    { num: "02", title: "Explorez autour de vous", desc: "Parcourez les commerces et produits référencés près de chez vous. Comparez les prix, vérifiez la disponibilité et trouvez ce que vous cherchez.", accent: "text-accent" },
-    { num: "03", title: "Trouvez et achetez", desc: "Rendez-vous directement chez le commerçant en toute confiance. Vous savez déjà ce qui est disponible, où et à quel prix.", accent: "text-green-600" },
+    { num: "01", title: "Téléchargez Kash", desc: "Gratuit sur iOS et Android. Votre compte est créé en quelques secondes.", accent: "text-primary" },
+    { num: "02", title: "Recherchez un produit", desc: "Voyez quels commerces de votre quartier le référencent, à quel prix et où ils se trouvent.", accent: "text-accent" },
+    { num: "03", title: "Contactez le commerce", desc: "Un appel ou un message suffit pour confirmer la disponibilité avant de vous déplacer.", accent: "text-green-600" },
   ];
 
   return (
@@ -16,7 +16,7 @@ export default function HowItWorks() {
           <div className="mb-[72px] relative max-[900px]:mb-10">
             <div className="inline-block font-display text-[11px] font-bold text-primary bg-primary-muted py-1.5 px-3.5 rounded-full uppercase tracking-[1.2px] mb-4.5">Processus</div>
             <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">Comment ça marche ?</h2>
-            <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] mx-auto max-[480px]:text-sm">Trois étapes simples pour connecter commerçants et clients.</p>
+            <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] mx-auto max-[480px]:text-sm">De la recherche au commerçant, en trois étapes.</p>
           </div>
         </ScrollReveal>
 

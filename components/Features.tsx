@@ -1,24 +1,24 @@
 "use client";
-import { FiMapPin, FiUsers, FiZap } from "react-icons/fi";
+import { FiMapPin, FiTag, FiPhone } from "react-icons/fi";
 import ScrollReveal from "./ScrollReveal";
 
 const features = [
   {
     icon: <FiMapPin />,
-    title: "Découverte locale",
-    desc: "Explorez les commerçants autour de vous, consultez leurs catalogues, promotions et avis clients. Le tout en temps réel, depuis votre quartier.",
+    title: "Les commerces de votre quartier",
+    desc: "Explorez les commerces référencés autour de vous, leurs produits et leurs promotions.",
     color: "from-primary to-blue-500",
   },
   {
-    icon: <FiUsers />,
-    title: "Mise en relation directe",
-    desc: "Kash connecte clients et commerçants de proximité. Trouvez le bon vendeur, comparez les offres et échangez en toute confiance.",
+    icon: <FiTag />,
+    title: "Les prix affichés",
+    desc: "Chaque produit affiche le prix communiqué par le commerce, avec la date de sa dernière mise à jour.",
     color: "from-accent to-orange-400",
   },
   {
-    icon: <FiZap />,
-    title: "Simplifiez votre quotidien",
-    desc: "Une interface intuitive et ergonomique, pensée pour être prise en main en quelques secondes. Pas besoin de tutoriel, tout est clair, fluide et accessible à tous.",
+    icon: <FiPhone />,
+    title: "Le contact direct",
+    desc: "Téléphone, adresse, horaires : joignez le commerçant pour confirmer avant de vous déplacer.",
     color: "from-green-500 to-emerald-400",
   },
 ];
@@ -29,9 +29,9 @@ export default function Features() {
       <div className="max-w-[1200px] mx-auto">
         <ScrollReveal animation="fade-in-up">
           <div className="text-center mb-16 relative">
-            <div className="inline-block font-display text-[11px] font-bold text-primary bg-primary-muted py-1.5 px-3.5 rounded-full uppercase tracking-[1.2px] mb-4.5">Fonctionnalités</div>
-            <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">Tout ce dont vous avez besoin</h2>
-            <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] mx-auto max-[480px]:text-sm">Une application pensée pour rapprocher commerçants et clients. Simple, rapide et efficace.</p>
+            <div className="inline-block font-display text-[11px] font-bold text-primary bg-primary-muted py-1.5 px-3.5 rounded-full uppercase tracking-[1.2px] mb-4.5">La plateforme</div>
+            <h2 className="font-display text-[clamp(28px,3vw,44px)] font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-4">Tout ce que Kash réunit</h2>
+            <p className="text-base font-light text-gray-500 leading-[1.75] max-w-[520px] mx-auto max-[480px]:text-sm">Les commerces, leurs produits, leurs prix et leurs coordonnées, au même endroit.</p>
           </div>
         </ScrollReveal>
         <div className="grid grid-cols-3 gap-6 relative max-[1024px]:grid-cols-2 max-[900px]:grid-cols-1">
