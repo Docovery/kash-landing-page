@@ -63,7 +63,7 @@ export default function Image() {
             textAlign: "center",
           }}
         >
-          Les commerces de votre quartier
+          {"Les commerces n'ont jamais été aussi proches de vous grâce à Kash RDC"}
         </div>
         <div
           style={{

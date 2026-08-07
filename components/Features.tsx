@@ -5,7 +5,7 @@ import ScrollReveal from "./ScrollReveal";
 const features = [
   {
     icon: <FiMapPin />,
-    title: "Les commerces de votre quartier",
+    title: "Les commerces autour de vous",
     desc: "Explorez les commerces référencés autour de vous, leurs produits et leurs promotions.",
     color: "from-primary to-blue-500",
   },

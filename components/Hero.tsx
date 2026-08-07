@@ -24,7 +24,7 @@ export default function Hero() {
         {/* Left content with staggered entrance */}
         <div>
           <h1 className={`font-display text-[clamp(38px,4.8vw,62px)] font-extrabold text-white leading-[1.06] tracking-[-2px] mb-5.5 max-[480px]:text-[32px] max-[480px]:tracking-[-1px] max-[480px]:mb-4 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            Trouvez les produits<br />autour de vous.<br /><em className="not-italic gradient-text">Sur une seule app.</em>
+            Trouvez les produits<br />autour de vous.<br /><em className="not-italic gradient-text">Sur Kash RDC</em>
           </h1>
           <p className={`text-base font-light text-white/78 max-w-[440px] leading-[1.75] mb-9.5 max-[900px]:mx-auto max-[900px]:max-w-[520px] max-[480px]:text-sm max-[480px]:mb-7 transition-all duration-700 delay-150 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées sur une seule plateforme.
@@ -38,13 +38,9 @@ export default function Hero() {
             </a>
           </div>
           <div className={`flex max-[900px]:justify-center transition-all duration-700 delay-500 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <span className="inline-flex items-center gap-2.5 rounded-full border border-white/22 bg-white/10 backdrop-blur-[10px] py-2.5 px-4.5 max-[480px]:px-4 max-[480px]:py-2">
-              <span className="relative flex w-2 h-2 shrink-0">
-                <span className="absolute inline-flex w-full h-full rounded-full bg-accent opacity-75 animate-ping" />
-                <span className="relative inline-flex w-2 h-2 rounded-full bg-accent" />
-              </span>
-              <span className="text-[13px] text-white/80 font-normal font-body text-left max-[480px]:text-xs">
-                Rejoignez les <strong className="text-white font-semibold">premiers utilisateurs</strong> de Kash
+            <span className="inline-flex items-center backdrop-blur-[10px] py-2.5 px-4.5 max-[480px]:px-4 max-[480px]:py-2">
+              <span className="text-[13px] text-white/80 font-normal text-left max-[480px]:text-xs">
+                Rejoignez les <strong className="gradient-text font-semibold">premiers utilisateurs</strong> de Kash RDC
               </span>
             </span>
           </div>
