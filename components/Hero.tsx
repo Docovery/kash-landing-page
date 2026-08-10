@@ -27,7 +27,7 @@ export default function Hero() {
             Trouvez les produits<br />autour de vous.<br /><em className="not-italic gradient-text">Sur Kash RDC</em>
           </h1>
           <p className={`text-base font-light text-white/78 max-w-[440px] leading-[1.75] mb-9.5 max-[900px]:mx-auto max-[900px]:max-w-[520px] max-[480px]:text-sm max-[480px]:mb-7 transition-all duration-700 delay-150 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées sur une seule plateforme.
+            Kash réunit les commerces autour de vous, leurs produits, leurs prix et leurs coordonnées sur une seule plateforme.
           </p>
           <div className={`flex gap-3.5 flex-wrap mb-12 max-[900px]:justify-center max-[900px]:mb-9 max-[480px]:flex-col max-[480px]:items-center transition-all duration-700 delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <a href="#cta" className="btn-primary font-display text-sm font-semibold text-white bg-accent border-none rounded-full py-[15px] px-[34px] cursor-pointer transition-all duration-200 shadow-[0_6px_24px_rgba(255,127,80,0.45)] no-underline inline-block hover:-translate-y-0.5 hover:shadow-[0_10px_36px_rgba(255,127,80,0.55)] glow-ring max-[480px]:w-full max-[480px]:text-center">

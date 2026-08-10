@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Kash — Les commerces de votre quartier",
+    name: "Kash | Les commerces et produits autour de vous",
     short_name: "Kash",
     description:
-      "Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
+      "Kash réunit les commerces autour de vous, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

@@ -21,7 +21,7 @@ const useCases = [
   {
     query: "huile de palme 1 L",
     title: "Les courses du quotidien",
-    desc: "Voyez quels commerces de votre quartier la référencent et à quel prix, puis appelez celui qui vous arrange.",
+    desc: "Voyez quels commerces autour de vous la référencent et à quel prix, puis appelez celui qui vous arrange.",
     img: "/images/usecases/huile-de-palme.webp",
     alt: "Bouteilles et bidons d'huile de palme sur l'étal d'un vendeur",
     featured: true,

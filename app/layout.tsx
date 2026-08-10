@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Kash",
   },
   description:
-    "Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
+    "Kash réunit les commerces autour de vous, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
   keywords: [
     "Kash",
     "commerce local",
@@ -57,13 +57,13 @@ export const metadata: Metadata = {
     url: "https://kashapp.tech",
     title: "Kash | Trouvez les produits et commerces autour de vous en RD Congo",
     description:
-      "Recherchez un produit, découvrez les commerces de votre quartier qui le proposent, consultez leurs prix et contactez-les directement.",
+      "Recherchez un produit, découvrez les commerces autour de vous qui le proposent, consultez leurs prix et contactez-les directement.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Kash | Trouvez les produits et commerces autour de vous en RD Congo",
     description:
-      "Recherchez un produit, découvrez les commerces de votre quartier qui le proposent, consultez leurs prix et contactez-les directement.",
+      "Recherchez un produit, découvrez les commerces autour de vous qui le proposent, consultez leurs prix et contactez-les directement.",
   },
 };
 
@@ -74,7 +74,7 @@ const organizationJsonLd = {
   url: "https://kashapp.tech",
   logo: "https://kashapp.tech/logo.png",
   description:
-    "Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
+    "Kash réunit les commerces autour de vous, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",

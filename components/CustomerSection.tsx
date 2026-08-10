@@ -35,7 +35,7 @@ export default function CustomerSection() {
             Cherchez un produit, découvrez qui le propose
           </h2>
           <p className="text-base font-light text-white/70 leading-[1.75] max-w-[520px] max-[900px]:max-w-none max-[480px]:text-sm">
-            Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées. Vous voyez qui référence ce que vous cherchez, puis vous contactez le commerce directement.
+            Kash réunit les commerces autour de vous, leurs produits, leurs prix et leurs coordonnées. Vous voyez qui référence ce que vous cherchez, puis vous contactez le commerce directement.
           </p>
           <ul className="list-none mt-7 flex flex-col gap-4">
             {bullets.map((b, i) => (

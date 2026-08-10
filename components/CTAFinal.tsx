@@ -19,7 +19,7 @@ export default function CTAFinal() {
             Kash est disponible<br />sur tous vos appareils
           </h2>
           <p className="text-base font-light text-white/68 mb-8 leading-[1.75] max-w-[440px] max-[900px]:max-w-none max-[480px]:text-sm max-[480px]:mb-6">
-            Rejoignez les premiers utilisateurs de Kash et découvrez les commerces de votre quartier, leurs produits et leurs prix.
+            Rejoignez les premiers utilisateurs de Kash et découvrez les commerces autour de vous, leurs produits et leurs prix.
           </p>
 
           <div className="flex gap-3.5 flex-wrap max-[480px]:flex-col">

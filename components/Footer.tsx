@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="flex items-center mb-3 [&_svg]:h-10 [&_svg]:w-auto">
               <KashLogo invert />
             </div>
-            <p className="text-[13px] leading-[1.7] text-white/40 mb-5.5">Kash réunit les commerces de votre quartier, leurs produits, leurs prix et leurs coordonnées, sur une seule application.</p>
+            <p className="text-[13px] leading-[1.7] text-white/40 mb-5.5">Kash réunit les commerces autour de vous, leurs produits, leurs prix et leurs coordonnées, sur une seule application.</p>
             <div className="flex gap-2.5">
               {socials.map(({ Icon, label }, i) => (
                 <a key={i} href="#" aria-label={label} className="w-9 h-9 rounded-[10px] bg-white/7 flex items-center justify-center cursor-pointer transition-colors hover:bg-primary">

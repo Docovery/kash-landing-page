@@ -5,7 +5,7 @@ import ScrollReveal from "./ScrollReveal";
 export default function HowItWorks() {
   const steps = [
     { num: "01", title: "Téléchargez Kash", desc: "Gratuit sur iOS et Android. Votre compte est créé en quelques secondes.", accent: "text-primary" },
-    { num: "02", title: "Recherchez un produit", desc: "Voyez quels commerces de votre quartier le référencent, à quel prix et où ils se trouvent.", accent: "text-accent" },
+    { num: "02", title: "Recherchez un produit", desc: "Voyez quels commerces autour de vous le référencent, à quel prix et où ils se trouvent.", accent: "text-accent" },
     { num: "03", title: "Contactez le commerce", desc: "Un appel ou un message suffit pour confirmer la disponibilité avant de vous déplacer.", accent: "text-green-600" },
   ];
 
