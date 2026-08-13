@@ -1,5 +1,5 @@
 import Hero from "../components/Hero";
-import LogosBar from "../components/LogosBar";
+// import LogosBar from "../components/LogosBar";
 import Features from "../components/Features";
 import MerchantSection from "../components/MerchantSection";
 import CustomerSection from "../components/CustomerSection";
@@ -30,7 +30,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Hero />
-      <LogosBar />
       <Features />
       <MerchantSection />
       <CustomerSection />
