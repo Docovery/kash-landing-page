@@ -26,9 +26,10 @@ const PROVIDERS: [string, string][] = [
   ["Firebase Cloud Messaging", "Notifications Android"],
   ["Apple", "Notifications iOS"],
   ["GeniusPay", "Paiements Premium"],
+  ["Microsoft Clarity", "Analytics du site kashapp.tech, cartes de chaleur et reconstitutions de sessions"],
 ];
 
-// Texte officiel : docs/Politique_Confidentialite_KASH_V2_0_17_09_2026.pdf.
+// Texte officiel : docs/Politique_Confidentialite_KASH_V2_1_18_09_2026.pdf.
 // Recopié à l'identique — toute modification doit partir du document source et
 // être reportée aussi dans kash-mobile (app/privacy.tsx).
 export default function PrivacyPage() {
@@ -37,8 +38,8 @@ export default function PrivacyPage() {
       eyebrow="Légal"
       title="Politique de confidentialité"
       intro="La présente Politique de confidentialité explique comment les données personnelles sont collectées, utilisées, transmises, conservées et protégées dans le cadre de l’utilisation de l’application et des services KASH. Elle s’applique à l’application mobile KASH, au site kashapp.tech et aux services numériques associés exploités par K.A.S.H SARLU."
-      lastUpdated="17 septembre 2026"
-      version="2.0"
+      lastUpdated="18 septembre 2026"
+      version="2.1"
       publisher={
         <>
           <p>République Démocratique du Congo</p>
@@ -84,6 +85,13 @@ export default function PrivacyPage() {
                 <li>demandes de proforma, consultations et réponses ;</li>
                 <li>autres interactions utiles au fonctionnement et à l’amélioration du service.</li>
               </ul>
+              <h3>Données de navigation sur kashapp.tech</h3>
+              <ul>
+                <li>pages consultées et parcours de navigation ;</li>
+                <li>clics, défilements, mouvements de souris et autres interactions avec les pages ;</li>
+                <li>informations techniques nécessaires à l’analyse du site et à la détection de problèmes ;</li>
+                <li>identifiants ou cookies pseudonymes lorsque leur utilisation est activée conformément aux choix du visiteur.</li>
+              </ul>
               <h3>Données publiées volontairement</h3>
               <ul>
                 <li>avis, notes et commentaires ;</li>
@@ -126,17 +134,29 @@ export default function PrivacyPage() {
                 <li>prévenir les fraudes et abus ;</li>
                 <li>corriger des erreurs techniques et améliorer KASH ;</li>
                 <li>produire des statistiques et analyses agrégées.</li>
+                <li>analyser et améliorer l’utilisation du site kashapp.tech.</li>
               </ul>
             </>
           ),
         },
         {
-          title: "4. Analytics interne KASH",
+          title: "4. Analytics de l’application mobile KASH",
           body: (
             <>
-              <p>KASH utilise un système Analytics développé en interne. KASH n’utilise actuellement pas Google Analytics, Firebase Analytics ni un autre outil Analytics tiers pour ce suivi d’activité.</p>
+              <p>L’application mobile KASH utilise un système Analytics développé en interne. KASH n’utilise actuellement pas Google Analytics, Firebase Analytics ni un autre outil Analytics tiers pour le suivi d’activité de l’application mobile.</p>
               <p>Les événements Analytics peuvent notamment concerner les recherches, vues de produits, services ou commerces, clics WhatsApp, appels, localisation, demandes de proforma et autres interactions utiles au fonctionnement du service.</p>
-              <p>Ces informations sont enregistrées dans l’infrastructure KASH afin d’analyser l’utilisation des fonctionnalités, d’identifier des problèmes, d’améliorer l’expérience et de produire des statistiques.</p>
+              <p>Ces informations sont enregistrées dans l’infrastructure KASH afin d’analyser l’utilisation des fonctionnalités, d’identifier des problèmes, d’améliorer l’expérience utilisateur et de produire des statistiques.</p>
+            </>
+          ),
+        },
+        {
+          title: "4 bis. Analytics du site kashapp.tech - Microsoft Clarity",
+          body: (
+            <>
+              <p>Le site et la landing page kashapp.tech utilisent Microsoft Clarity afin de comprendre la manière dont les visiteurs utilisent les pages web et d’identifier les améliorations possibles du site.</p>
+              <p>Microsoft Clarity peut notamment traiter des informations relatives aux pages consultées, aux clics, défilements, mouvements de souris, redimensionnements de fenêtre, sélections, événements techniques, dimensions d’affichage et autres interactions avec les pages. Clarity peut également générer des cartes de chaleur et des reconstitutions de sessions à partir des événements enregistrés. Les champs identifiés comme sensibles sont masqués selon les mécanismes prévus par Microsoft.</p>
+              <p>Selon la configuration du site et le choix du visiteur, Clarity peut utiliser des cookies ou identifiants pseudonymes afin de relier les interactions entre plusieurs pages ou sessions. Lorsque la réglementation applicable exige un consentement pour ces technologies non essentielles, KASH met en œuvre un mécanisme permettant de recueillir et transmettre ce choix à Clarity.</p>
+              <p>Les données traitées par Microsoft Clarity sont soumises aux conditions et <a href="https://privacy.microsoft.com/fr-fr/privacystatement">règles de confidentialité de Microsoft</a>. L’utilisation de Clarity concerne le site web kashapp.tech et ne remplace pas le système Analytics interne utilisé dans l’application mobile KASH.</p>
             </>
           ),
         },
@@ -260,6 +280,7 @@ export default function PrivacyPage() {
                 </table>
               </div>
               <p>Tesseract n’est pas un prestataire externe : il est exécuté directement sur l’infrastructure Hostinger de KASH.</p>
+              <p>Microsoft Clarity intervient uniquement pour l’analyse de la landing page et du site kashapp.tech. Il n’est pas utilisé pour l’Analytics interne de l’application mobile.</p>
             </>
           ),
         },
@@ -282,7 +303,7 @@ export default function PrivacyPage() {
           title: "19. Transferts internationaux",
           body: (
             <>
-              <p>Certaines données KASH peuvent être hébergées ou traitées hors de la République Démocratique du Congo. Cela concerne notamment l’Allemagne pour l’infrastructure principale Hostinger, les États-Unis pour Cloudinary et certains traitements réalisés par Google Gemini, ainsi que d’autres infrastructures techniques pouvant être utilisées par les prestataires de notifications, emails ou paiement.</p>
+              <p>Certaines données KASH peuvent être hébergées ou traitées hors de la République Démocratique du Congo. Cela concerne notamment l’Allemagne pour l’infrastructure principale Hostinger, les États-Unis pour Cloudinary et certains traitements réalisés par Google Gemini, ainsi que les infrastructures internationales pouvant être utilisées par les prestataires de notifications, emails, paiement ou analytics web, notamment Microsoft Clarity.</p>
               <p>KASH veille à limiter les transmissions de données à ce qui est nécessaire au fonctionnement du service et s’efforce de mettre en œuvre les mesures et garanties nécessaires conformément à la réglementation applicable en matière de transferts internationaux de données.</p>
             </>
           ),
