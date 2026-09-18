@@ -10,12 +10,17 @@ export default function LegalPage({
   title,
   intro,
   lastUpdated,
+  version,
+  publisher,
   sections,
 }: {
   eyebrow: string;
   title: string;
   intro: string;
   lastUpdated: string;
+  version?: string;
+  /** Bloc éditeur (raison sociale, adresse, contact) affiché sous la date. */
+  publisher?: ReactNode;
   sections: LegalSection[];
 }) {
   return (
@@ -39,16 +44,24 @@ export default function LegalPage({
       {/* Content */}
       <section className="bg-white rounded-3xl py-16 px-15 mx-10 max-[900px]:py-10 max-[900px]:px-6 max-[900px]:mx-3 max-[480px]:py-8 max-[480px]:px-4 max-[480px]:mx-2 max-[480px]:rounded-2xl">
         <div className="max-w-[800px] mx-auto">
-          <p className="font-display text-xs font-semibold text-gray-400 uppercase tracking-[1px] mb-10 pb-6 border-b border-gray-100">
-            Dernière mise à jour : {lastUpdated}
-          </p>
+          <div className="flex flex-col gap-3 mb-10 pb-6 border-b border-gray-100">
+            <p className="font-display text-xs font-semibold text-gray-400 uppercase tracking-[1px]">
+              Dernière mise à jour : {lastUpdated}
+              {version && <> · Version {version}</>}
+            </p>
+            {publisher && (
+              <div className="text-[13px] text-gray-500 leading-[1.7] [&_a]:text-primary [&_a]:no-underline hover:[&_a]:underline">
+                {publisher}
+              </div>
+            )}
+          </div>
           <div className="flex flex-col gap-11">
             {sections.map((s, i) => (
               <div key={i}>
                 <h2 className="font-display text-lg font-bold text-gray-900 mb-3 tracking-tight">
                   {s.title}
                 </h2>
-                <div className="flex flex-col gap-3 text-[15px] text-gray-600 leading-[1.8] [&_a]:text-primary [&_a]:no-underline [&_a]:font-medium hover:[&_a]:underline [&_strong]:text-gray-900 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-1.5">
+                <div className="flex flex-col gap-3 text-[15px] text-gray-600 leading-[1.8] [&_a]:text-primary [&_a]:no-underline [&_a]:font-medium hover:[&_a]:underline [&_strong]:text-gray-900 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-1.5 [&_h3]:font-display [&_h3]:text-[15px] [&_h3]:font-semibold [&_h3]:text-gray-900 [&_h3]:mt-2 [&_table]:w-full [&_table]:text-left [&_table]:text-sm [&_th]:font-semibold [&_th]:text-gray-900 [&_th]:bg-gray-50 [&_th]:py-2.5 [&_th]:px-4 [&_td]:py-2.5 [&_td]:px-4 [&_td]:align-top [&_tr]:border-b [&_tr]:border-gray-100 [&_tbody_tr:last-child]:border-b-0">
                   {s.body}
                 </div>
               </div>
