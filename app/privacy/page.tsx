@@ -29,8 +29,9 @@ const PROVIDERS: [string, string][] = [
   ["Microsoft Clarity", "Analytics du site kashapp.tech, cartes de chaleur et reconstitutions de sessions"],
 ];
 
-// Texte officiel : docs/Politique_Confidentialite_KASH_V2_1_18_09_2026.pdf.
-// Recopié à l'identique — toute modification doit partir du document source et
+// Texte officiel : docs/Politique_Confidentialite_KASH_V2_2_28_09_2026.pdf
+// (V2.1 du 18/09/2026 + §7 accord avant le premier scan et §12 demande de
+// contact Premium, ajoutés le 28/09/2026). Recopié à l'identique — toute modification doit partir du document source et
 // être reportée aussi dans kash-mobile (app/privacy.tsx).
 export default function PrivacyPage() {
   return (
@@ -38,8 +39,8 @@ export default function PrivacyPage() {
       eyebrow="Légal"
       title="Politique de confidentialité"
       intro="La présente Politique de confidentialité explique comment les données personnelles sont collectées, utilisées, transmises, conservées et protégées dans le cadre de l’utilisation de l’application et des services KASH. Elle s’applique à l’application mobile KASH, au site kashapp.tech et aux services numériques associés exploités par K.A.S.H SARLU."
-      lastUpdated="18 septembre 2026"
-      version="2.1"
+      lastUpdated="28 septembre 2026"
+      version="2.2"
       publisher={
         <>
           <p>République Démocratique du Congo</p>
@@ -226,6 +227,7 @@ export default function PrivacyPage() {
           body: (
             <>
               <p>Les paiements liés aux offres Premium KASH sont traités par GeniusPay, notamment pour Mobile Money et les paiements par carte bancaire. GeniusPay reçoit les informations nécessaires à l’exécution du paiement.</p>
+              <p>Lorsqu’un commerçant demande à être contacté au sujet des services Premium, KASH enregistre cette demande (compte, commerce concerné, coordonnées) et l’utilise pour le recontacter par téléphone, WhatsApp, SMS ou e-mail, et pour lui transmettre, le cas échéant, un lien de paiement. Le paiement a lieu sur la page payment.kashapp.tech, hors de l’application.</p>
               <p>KASH ne stocke pas le numéro complet de carte bancaire. KASH peut conserver uniquement certaines informations utiles au suivi de la transaction, notamment le montant, l’offre souscrite, le moyen de paiement, une référence de transaction, le statut et, lorsqu’ils sont communiqués à titre de référence, les quatre derniers chiffres de la carte.</p>
               <p>Les données sensibles de paiement sont traitées par GeniusPay selon ses propres obligations de sécurité et de confidentialité.</p>
             </>

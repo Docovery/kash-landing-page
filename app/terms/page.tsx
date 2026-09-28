@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Texte officiel : docs/Conditions_Generales_Utilisation_KASH_V2_0_17_09_2026.pdf.
+// Texte officiel : docs/Conditions_Generales_Utilisation_KASH_V2_1_28_09_2026.pdf
+// (V2.0 du 17/09/2026 + §19 et §20 révisés le 28/09/2026 : Premium hors de l'app).
 // Recopié à l'identique — toute modification doit partir du document source et
 // être reportée aussi dans kash-mobile (app/terms.tsx).
 export default function TermsPage() {
@@ -25,8 +26,8 @@ export default function TermsPage() {
       eyebrow="Légal"
       title="Conditions Générales d’Utilisation"
       intro="Les présentes Conditions Générales d’Utilisation, ci-après les « CGU », encadrent l’accès et l’utilisation de l’application mobile KASH, du site kashapp.tech et des services numériques associés. En créant un compte KASH, l’utilisateur accepte les présentes CGU et reconnaît avoir pris connaissance de la Politique de confidentialité."
-      lastUpdated="17 septembre 2026"
-      version="2.0"
+      lastUpdated="28 septembre 2026"
+      version="2.1"
       publisher={
         <>
           <p>
@@ -247,7 +248,7 @@ export default function TermsPage() {
           body: (
             <>
               <p>KASH peut proposer aux commerçants des fonctionnalités Premium payantes destinées notamment à améliorer la visibilité de leur commerce ou de certaines offres.</p>
-              <p>Avant tout paiement, KASH affiche les principales caractéristiques de l’offre concernée, notamment son prix et sa durée lorsqu’elles sont applicables.</p>
+              <p>Les services Premium ne sont pas vendus dans l’application. Le commerçant peut y demander à être contacté ; l’équipe KASH lui présente alors l’offre, notamment son prix et sa durée, qui figurent également sur la page de paiement sécurisée avant tout paiement.</p>
               <p>Les fonctionnalités exactes, durées, modalités de renouvellement éventuel et autres conditions particulières affichées au moment de l’achat complètent les présentes CGU.</p>
               <p>Un service Premium améliore les possibilités de visibilité disponibles dans KASH mais ne garantit pas un nombre de vues, de contacts, de clients, de ventes ou de revenus.</p>
             </>
@@ -258,6 +259,7 @@ export default function TermsPage() {
           body: (
             <>
               <p>Les paiements Premium sont traités par GeniusPay.</p>
+              <p>Le paiement s’effectue hors de l’application, sur une page sécurisée (payment.kashapp.tech), au moyen d’un lien personnel transmis par l’équipe KASH. Ce lien est valable 7 jours et ne peut servir qu’une fois. Le service Premium est activé après confirmation du paiement par GeniusPay.</p>
               <p>Selon les options disponibles, ils peuvent notamment être effectués par Mobile Money ou carte bancaire.</p>
               <p>Le professionnel est responsable de l’exactitude des informations communiquées au moment du paiement.</p>
               <p>KASH ne stocke pas le numéro complet des cartes bancaires.</p>
