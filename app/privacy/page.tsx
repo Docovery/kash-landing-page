@@ -183,6 +183,7 @@ export default function PrivacyPage() {
               <h3>Google Gemini</h3>
               <p>KASH utilise principalement Google Gemini afin d’effectuer la reconnaissance des informations contenues dans l’image et de structurer les données extraites. Selon la configuration technique utilisée par KASH, les images ou données nécessaires à cette analyse peuvent transiter par des infrastructures de Google situées aux États-Unis pendant le traitement.</p>
               <p>Selon les informations techniques communiquées à KASH, les données traitées via cette configuration ne sont pas destinées à être conservées de manière permanente par Gemini pour ce traitement. KASH n’utilise pas Gemini comme système de stockage permanent de ses factures.</p>
+              <p>Aucune facture n’est envoyée sans l’accord explicite de l’utilisateur, demandé dans l’application avant le premier scan. L’utilisateur peut retirer cet accord à tout moment depuis Profil &gt; Analyse des factures par IA : ses factures suivantes ne sont alors plus envoyées, et le scan est désactivé jusqu’à un nouvel accord.</p>
               <h3>Tesseract</h3>
               <p>En solution de secours, KASH peut utiliser Tesseract, un logiciel OCR open source. Tesseract est installé et exécuté directement sur le serveur Hostinger utilisé par KASH en Allemagne. Son utilisation n’entraîne donc pas l’envoi de l’image à un prestataire tiers supplémentaire. Tesseract extrait du texte brut et n’est pas un modèle de langage génératif.</p>
               <h3>Mistral AI</h3>
