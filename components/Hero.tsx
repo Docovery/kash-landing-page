@@ -67,7 +67,7 @@ export default function Hero() {
               style={{ position: "relative", width: "260px", height: "476px" }}
               className="z-2 animate-[phoneFloat_4.5s_ease-in-out_infinite] drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)] [filter:drop-shadow(0_0_40px_rgba(255,127,80,0.25))_drop-shadow(0_40px_60px_rgba(0,0,0,0.45))] max-[900px]:!w-[220px] max-[900px]:!h-[403px] max-[480px]:!w-[190px] max-[480px]:!h-[348px]"
             >
-              <Image src="/images/mockups/mockup1home.svg" alt="Écran d'accueil de l'application Kash" fill sizes="(max-width: 480px) 190px, (max-width: 900px) 220px, 260px" style={{ objectFit: "contain" }} priority />
+              <Image src="/images/mockups/home.webp" alt="Écran d'accueil de l'application Kash" fill sizes="(max-width: 480px) 190px, (max-width: 900px) 220px, 260px" style={{ objectFit: "contain" }} priority />
             </div>
 
             {/* Right badge */}

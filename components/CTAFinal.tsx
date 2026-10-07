@@ -4,8 +4,8 @@ import { FiSmartphone, FiMapPin } from "react-icons/fi";
 
 export default function CTAFinal() {
   const stores = [
-    { Icon: FaApple, sub: "Télécharger sur", name: "App Store" },
-    { Icon: FaGooglePlay, sub: "Disponible sur", name: "Google Play" },
+    { Icon: FaApple, sub: "Télécharger sur", name: "App Store", href: "#" },
+    { Icon: FaGooglePlay, sub: "Disponible sur", name: "Google Play", href: "https://play.google.com/store/apps/details?id=tech.kash.app" },
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function CTAFinal() {
 
           <div className="flex gap-3.5 flex-wrap max-[480px]:flex-col">
             {stores.map((store, i) => (
-              <a key={i} href="#" className="btn-primary flex items-center gap-2.5 bg-white/10 border-[1.5px] border-white/22 rounded-[14px] py-[13px] px-5.5 no-underline transition-all backdrop-blur-[10px] hover:bg-white/18 hover:border-white/40 hover:-translate-y-0.5 max-[480px]:w-full max-[480px]:justify-center max-[480px]:py-3 max-[480px]:px-4">
+              <a key={i} href={store.href} {...(store.href !== "#" && { target: "_blank", rel: "noopener noreferrer" })} className="btn-primary flex items-center gap-2.5 bg-white/10 border-[1.5px] border-white/22 rounded-[14px] py-[13px] px-5.5 no-underline transition-all backdrop-blur-[10px] hover:bg-white/18 hover:border-white/40 hover:-translate-y-0.5 max-[480px]:w-full max-[480px]:justify-center max-[480px]:py-3 max-[480px]:px-4">
                 <store.Icon className="w-6 h-6 text-white shrink-0" />
                 <div className="text-left">
                   <span className="text-[10px] text-white/60 block font-body">{store.sub}</span>
@@ -39,7 +39,7 @@ export default function CTAFinal() {
         <div className="flex justify-center items-center relative max-[900px]:hidden">
           <div className="absolute w-80 h-80 rounded-full bg-linear-to-br from-primary/15 via-[rgba(26,127,232,0.1)] to-accent/8 blur-[40px]" />
           <div style={{ position: "relative", width: "240px", height: "440px" }} className="z-2 animate-[phoneFloatStraight_5s_ease-in-out_infinite_0.5s] origin-bottom drop-shadow-[0_40px_60px_rgba(0,0,0,0.5)]">
-            <Image src="/images/mockups/splash_screen_mockup.svg" alt="Kash App" fill style={{ objectFit: "contain" }} />
+            <Image src="/images/mockups/product.webp" alt="Fiche produit dans l'application Kash" fill sizes="240px" style={{ objectFit: "contain" }} />
           </div>
 
           {/* Floating badge: platforms */}

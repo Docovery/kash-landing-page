@@ -18,7 +18,7 @@ export default function MerchantSection() {
 
           {/* Phone mockup */}
           <div style={{ position: "relative", width: "230px", height: "422px" }} className="z-2 drop-shadow-[0_24px_64px_rgba(0,87,183,0.22)]">
-            <Image src="/images/mockups/splash_screen2.svg" alt="Application Kash" fill sizes="230px" style={{ objectFit: "contain" }} loading="eager" />
+            <Image src="/images/mockups/merchant.webp" alt="Page d'un commerce dans l'application Kash" fill sizes="230px" style={{ objectFit: "contain" }} loading="eager" />
           </div>
 
           {/* Floating badge: vitrine */}
