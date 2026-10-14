@@ -4,7 +4,7 @@ import { FiSmartphone, FiMapPin } from "react-icons/fi";
 
 export default function CTAFinal() {
   const stores = [
-    { Icon: FaApple, sub: "Télécharger sur", name: "App Store", href: "#" },
+    { Icon: FaApple, sub: "Télécharger sur", name: "App Store", href: "https://apps.apple.com/us/app/kash-rdc/id6816103099" },
     { Icon: FaGooglePlay, sub: "Disponible sur", name: "Google Play", href: "https://play.google.com/store/apps/details?id=tech.kash.app" },
   ];
 
