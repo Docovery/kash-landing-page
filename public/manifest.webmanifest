@@ -1,0 +1,16 @@
+{
+  "name": "Kash | Les commerces et produits autour de vous",
+  "short_name": "Kash",
+  "description": "Kash réunit les commerces autour de vous, leurs produits, leurs prix et leurs coordonnées. Recherchez un produit, découvrez qui le propose et contactez le commerce directement.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0057B7",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
