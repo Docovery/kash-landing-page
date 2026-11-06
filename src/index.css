@@ -142,6 +142,16 @@ body::before {
   50% { transform: translateY(-8px); }
 }
 
+/* ─── HERO ENTRANCE (components/Hero.tsx) ───
+   En CSS et non via un état React : le hero pré-rendu s'affiche dès que la
+   feuille de style est chargée, sans attendre le JavaScript. Ces keyframes
+   animent `translate`/`scale` (pas `transform`) pour se cumuler avec
+   phoneFloat et badgeFloat sur les mêmes éléments. */
+@keyframes heroUp { from { opacity: 0; translate: 0 2rem; } }
+@keyframes heroPhone { from { opacity: 0; translate: 0 3rem; scale: 0.95; } }
+@keyframes heroFromLeft { from { opacity: 0; translate: -1.5rem 0; } }
+@keyframes heroFromRight { from { opacity: 0; translate: 1.5rem 0; } }
+
 @keyframes laserScan {
   0% { top: 20%; }
   50% { top: 78%; }
